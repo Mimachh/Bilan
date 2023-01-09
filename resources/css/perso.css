@@ -1,0 +1,71 @@
+/* MAIN */
+
+.bg-black-perso
+{
+    background-color: #171a1d;
+}
+
+.text-black-perso
+{
+    color: #171a1d;
+}
+
+.bg-violet-rose-perso
+{
+    background-color: #cc0099;
+}
+
+.text-violet-rose-perso
+{
+    color: #cc0099;
+}
+
+.bg-blue-perso
+{
+    background-color: #3366ff;
+}
+
+.text-blue-perso
+{
+    color: #3366ff;
+}
+
+/* PROGRESS BAR */
+.progressMigrantsTotal {
+    background-color: cyan;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+}
+.progress-migrants-total-value {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: repeating-linear-gradient(to left, #0546e0, #1172f9, #4892f9);
+    box-shadow: 0 5px 5px -6px #0546e0, 0 3px 7px #1172f9;
+    border-radius: 20px;
+    color: #fff;
+    height: 100%;
+    width: 0;
+    transition: 1s ease 0.3s;
+}
+
+.progressMigrantsToday {
+    background-color: cyan;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+}
+
+.progress-migrants-today-value {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: repeating-linear-gradient(to left, #0546e0, #1172f9, #4892f9);
+    box-shadow: 0 5px 5px -6px #0546e0, 0 3px 7px #1172f9;
+    border-radius: 20px;
+    color: #fff;
+    height: 100%;
+    width: 0;
+    transition: 1s ease 0.3s;
+}
