@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\View\Components\Dons;
+use App\View\Components\Footer;
 use Illuminate\Support\Facades\Blade;
 use App\View\Components\NavigationBar;
 use App\View\Components\Stats;
@@ -30,5 +31,6 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('navigation-bar', NavigationBar::class);
         Blade::component('stats', Stats::class);
         Blade::component('dons', Dons::class);
+        Blade::component('Footer', Footer::class);
     }
 }

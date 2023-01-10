@@ -19,7 +19,8 @@
 
         <main class="">
             <x-stats/>
-            <x-dons/>    
+            <x-dons/>
+            <x-footer/>     
         </main>
 
         

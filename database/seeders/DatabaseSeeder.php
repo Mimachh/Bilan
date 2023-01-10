@@ -21,10 +21,32 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        DB::table('petitions')->insert([
+            ['id' => '1', 'title' => 'Pour ou Contre Macron en 2027?'],
 
-        DB::table('natalités')->insert([
-            ['id' => '1', 'nombre' => '230'],
+        ]);
 
+        DB::table('responses')->insert([
+            ['id' => '1', 'name' => 'Oui'],
+            ['id' => '2', 'name' => 'Non'],
+            ['id' => '3', 'name' => 'NSP'],
+
+        ]);
+
+        DB::table('statuts')->insert([
+ 
+            ['id'=>'1', 'name' => 'En attente'],
+            ['id'=>'2', 'name' => 'Traité'],
+            ['id'=>'3', 'name' => 'Archivé'],
+            
+        ]);
+
+        DB::table('subjects')->insert([
+ 
+            ['id'=>'1', 'name' => 'Réclamation'],
+            ['id'=>'2', 'name' => 'Partenariat'],
+            ['id'=>'3', 'name' => 'Nous soutenir'],
+            ['id'=>'4', 'name' => 'Autre']
         ]);
     }
 }

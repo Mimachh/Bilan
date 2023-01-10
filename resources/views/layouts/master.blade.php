@@ -15,14 +15,12 @@
         @vite(['resources/css/app.css', 'resources/css/perso.css'])
 
     </head>
-    <body class="antialiased container">
+    <body class="antialiased container bg-black-perso">
        
 
         <div id="main" class="row">
                 @yield('content')
         </div>
-
-        
           
         @vite('resources/js/app.js')
     </body>

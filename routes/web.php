@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,10 @@ use App\Http\Controllers\TestController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('/');
 
 Route::get('/test', [TestController::class, 'index'])->name('natalite.index');
 
+Route::resource('contact', ContactController::class)->except('store');
+Route::post('contact/store', [ContactController::class, 'store'])->name('contact.store');
+Route::view('confirmation', 'contact.confirmation')->name('contact.confirmation');
