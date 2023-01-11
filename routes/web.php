@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ContactController;
 
@@ -18,6 +19,9 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('welcome');
 })->name('/');
+
+
+Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
 Route::get('/test', [TestController::class, 'index'])->name('natalite.index');
 

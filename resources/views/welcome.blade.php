@@ -18,6 +18,7 @@
            </div>
 
         <main class="">
+            <x-logo/>
             <x-stats/>
             <x-dons/>
             <x-footer/>     

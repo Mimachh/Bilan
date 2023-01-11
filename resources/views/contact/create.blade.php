@@ -2,11 +2,12 @@
 @section('content')
 
 <div class="container my-24 px-6 mx-auto bg-black-perso">
-
+@livewire('button-back')
   <!-- Section: Design Block -->
   <section class="mb-32 text-center text-white">
     <div class="max-w-[700px] mx-auto px-3 lg:px-6">
       <h2 class="text-3xl font-bold mb-12">Nous contacter</h2>
+      <small>Les champs marqué de * sont obligatoires</small>
       <form method="POST" action="{{ route('contact.store') }}">
         @csrf
         <div class="form-group mb-6">

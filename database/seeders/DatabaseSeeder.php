@@ -48,5 +48,14 @@ class DatabaseSeeder extends Seeder
             ['id'=>'3', 'name' => 'Nous soutenir'],
             ['id'=>'4', 'name' => 'Autre']
         ]);
+
+
+        DB::table('faqs')->insert([
+ 
+            ['id'=>'1', 'question' => 'Réclamation', 'answer' => 'patatipatatipatati patatipatati patatipatati patatipatati patatipatati patatipatati patatipatatipatatipatati patatipatati patati patati patati patati patatipatati'],
+            ['id'=>'2', 'question' => 'Partenariat', 'answer' => 'patati'],
+            ['id'=>'3', 'question' => 'Nous soutenir', 'answer' => 'patati'],
+            ['id'=>'4', 'question' => 'Autre', 'answer' => 'patati'],
+        ]);
     }
 }

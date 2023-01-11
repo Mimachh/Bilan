@@ -11,3 +11,4 @@
     <h1 class="text-green-400 font-medium text-xl">Votre message a bien été envoyé</h1>
     <a href="{{ route('/') }}" class="text-blue-600">Retourner sur la page principale </a>  
 </div>
+@endsection

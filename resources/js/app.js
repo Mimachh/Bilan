@@ -201,12 +201,11 @@ Alpine.start();
 
 
 
-
-
     
 
     function shareOnFacebook(){
-    const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + 'http://127.0.0.1:8000/' + generalMigrantsCounter;
+    const counter = generalMigrantsCounter;
+    const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + 'http://127.0.0.1:8000/';
     window.open(navUrl , '_blank');
     }
 
