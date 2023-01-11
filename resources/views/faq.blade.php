@@ -10,11 +10,11 @@
     <div class="md:max-w-1/2 md:w-1/2 mx-4 md:mx-auto">
     @foreach($faqs as $faq)
     <h2 class="mt-12 text-xl text-white">{{ $faq->id }}</h2>
-    <div class=" rounded-lg px-3 py-3 mb-2 font-medium bg-green-500 text-white mr-auto max-w-1/2 w-1/2">
+    <div class="mb-2 font-medium text-white mr-auto max-w-1/2 w-1/2">
         <p class="font-light">Question :</p>
         <p>{{ $faq->question }} </p>
     </div>
-    <div class="mb-12 rounded-lg px-3 py-3 mb-2 font-medium ml-auto bg-blue-500 text-gray-700 max-w-1/2 w-1/2">
+    <div class="mb-12 mb-2 font-medium ml-auto text-gray-400 max-w-1/2 w-1/2">
         <p class="font-light">Réponse :</p>
         <p>{{ $faq->answer }}</p>
     </div>
@@ -23,5 +23,4 @@
     </div>
     
 </div>
-
 @endsection

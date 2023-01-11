@@ -52,9 +52,9 @@ class DatabaseSeeder extends Seeder
 
         DB::table('faqs')->insert([
  
-            ['id'=>'1', 'question' => 'Réclamation', 'answer' => 'patatipatatipatati patatipatati patatipatati patatipatati patatipatati patatipatati patatipatatipatatipatati patatipatati patati patati patati patati patatipatati'],
-            ['id'=>'2', 'question' => 'Partenariat', 'answer' => 'patati'],
-            ['id'=>'3', 'question' => 'Nous soutenir', 'answer' => 'patati'],
+            ['id'=>'1', 'question' => 'Les chiffres sont-ils réels ?', 'answer' => 'patatipatatipatati patatipatati patatipatati patatipatati patatipatati patatipatati patatipatatipatatipatati patatipatati patati patati patati patati patatipatati'],
+            ['id'=>'2', 'question' => 'Comment sont calculées les statistiques ?', 'answer' => 'patati'],
+            ['id'=>'3', 'question' => 'Pourquoi certains chiffres reviennent en arrière parfois ?', 'answer' => 'patati'],
             ['id'=>'4', 'question' => 'Autre', 'answer' => 'patati'],
         ]);
     }

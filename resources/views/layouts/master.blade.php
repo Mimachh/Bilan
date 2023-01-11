@@ -21,7 +21,11 @@
         <div id="main" class="row">
                 @yield('content')
         </div>
-          
+
+        <footer class="row">
+            @include('includes.footer')
+        </footer>
+
         @vite('resources/js/app.js')
     </body>
 </html>
