@@ -17,7 +17,7 @@ class PetitionController extends Controller
      */
     public function index()
     {
-        $petitions = Petition::paginate(3);
+        $petitions = Petition::where('statut', 1)->paginate(3);
         
         return view('petitions.index', [
             'petitions' => $petitions,
@@ -51,7 +51,7 @@ class PetitionController extends Controller
             'name' => 'required|max:60',
             'last_name' => 'required|max:60',
             'petition_id' => 'required|integer',
-            'email' => 'required|max:255',
+            'email' => 'required|max:255|unique:signatures,email',
             'confirm_rule' => 'required|boolean',
         ], [
             'name.required' => 'Votre nom doit être renseigné',
@@ -59,6 +59,7 @@ class PetitionController extends Controller
             'last_name.required' => 'Votre prénom doit être renseigné',
             'last_name.max' => 'Votre prénom est trop long',
             'email.max' => 'Votre mail ne doit pas dépasser 255 caractères',
+            'email.unique' => 'Votre mail a déjà été utilisé',
             'email.required' => 'Vous devez renseigner votre mail',
             'confirm_rule.required' => 'Vous devez accepter les conditions d\'utilisation',
             'confirm_rule.boolean' => 'Vous devez cocher les conditions d\'utilisation',

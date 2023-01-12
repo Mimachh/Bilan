@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('newsletters', function (Blueprint $table) {
             $table->id();
-            $table->string('email');
-            $table->boolean('statut')->nullable();
+            $table->string('title');
+            $table->string('content');
             $table->timestamps();
         });
     }

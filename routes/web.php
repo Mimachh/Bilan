@@ -36,3 +36,9 @@ Route::get('/test', [TestController::class, 'index'])->name('natalite.index');
 Route::resource('contact', ContactController::class)->except('store');
 Route::post('contact/store', [ContactController::class, 'store'])->name('contact.store');
 Route::view('confirmation', 'contact.confirmation')->name('contact.confirmation');
+
+
+/* Admin route */
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+})->name('/admin');
