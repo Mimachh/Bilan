@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsletterUser;
 use App\Models\Petition;
 use App\Models\Response;
 use App\Models\Signature;
@@ -18,8 +19,6 @@ class PetitionController extends Controller
     {
         $petitions = Petition::paginate(3);
         
-        
-
         return view('petitions.index', [
             'petitions' => $petitions,
   
@@ -49,22 +48,33 @@ class PetitionController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'response_id' => 'required|integer',
+            'name' => 'required|max:60',
+            'last_name' => 'required|max:60',
             'petition_id' => 'required|integer',
             'email' => 'required|max:255',
             'confirm_rule' => 'required|boolean',
         ], [
-            'response_id.required' => 'Vous devez selectionner une réponse',
-            'response_id.integer' => 'La valeur n\'est pas bonne',
+            'name.required' => 'Votre nom doit être renseigné',
+            'name.max' => 'Votre nom est trop long',
             'last_name.required' => 'Votre prénom doit être renseigné',
+            'last_name.max' => 'Votre prénom est trop long',
             'email.max' => 'Votre mail ne doit pas dépasser 255 caractères',
             'email.required' => 'Vous devez renseigner votre mail',
-            'email.unique' => 'Ce mail à déjà été utilisé',
             'confirm_rule.required' => 'Vous devez accepter les conditions d\'utilisation',
             'confirm_rule.boolean' => 'Vous devez cocher les conditions d\'utilisation',
         ]);
 
+        $data2 = $request->validate([
+            'statut' => 'nullable|boolean',
+            'email' => 'required|max:255',
+        ], [
+            'statut.boolean' => 'La valeur est incorrecte',
+            'email.max' => 'Votre mail ne doit pas dépasser 255 caractères',
+            'email.required' => 'Vous devez renseigner votre mail',
+        ]);
+
         $create = Signature::create($data);
+                NewsletterUser::create($data2);
        
         return redirect()->route('petitions.confirmation');
 

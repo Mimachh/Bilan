@@ -10,10 +10,12 @@ class Signature extends Model
     use HasFactory;
 
     protected $fillable = [
-        'response_id',
+        'name',
+        'last_name',
         'petition_id',
         'email',
         'confirm_rule',
+        'newsletter',
     ];
 
     public function petition()

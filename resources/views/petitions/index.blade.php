@@ -14,13 +14,7 @@
             </div>
             <div class="text-gray-200">
                 @if($petition->signatures->count() > 0)
-                    <p>Nombre de votants : <span>{{ $petition->signatures->count() }}</span> </p>
-                    <p>Oui :  <span class="{{ (($petition->signatures->where('response_id', 1)->count() * 100) / $petition->signatures->count()) > 49 ? 'text-red-600' : 'text-blue-600' }}">
-                        {{ round( ($petition->signatures->where('response_id', 1)->count() * 100) / $petition->signatures->count() ) }} %</span></p>
-                    <p>Non : <span class="{{ (($petition->signatures->where('response_id', 2)->count() * 100) / $petition->signatures->count()) > 49 ? 'text-red-600' : 'text-blue-600' }}">
-                        {{ round( ($petition->signatures->where('response_id', 2)->count() * 100) / $petition->signatures->count() ) }} %</span></p>
-                    <p>NSP : <span class="{{ (($petition->signatures->where('response_id', 3)->count() * 100) / $petition->signatures->count()) > 49 ? 'text-red-600' : 'text-blue-600' }}">
-                        {{ round( ($petition->signatures->where('response_id', 3)->count() * 100) / $petition->signatures->count() ) }} %</span></p>
+                    <p>Nombre de signataires : <span>{{ $petition->signatures->count() }}</span> </p>
                 @endif 
             </div>   
         </div>

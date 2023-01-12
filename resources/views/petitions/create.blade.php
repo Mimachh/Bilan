@@ -17,6 +17,15 @@
       <form method='POST' action="{{ route('petitions.store') }}">
         @csrf
         <div class="form-group mb-6">
+          <input name="name" type="text" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="name"
+            placeholder="Votre nom*">
+            @error('name') <small class="text-red-600 italic"> {{ $errors->first('name') }}</small>@enderror
+        </div>
+        <div class="form-group mb-6">
+          <input name="last_name" type="text" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="last_name"
+            placeholder="Votre prénom*">
+            @error('last_name') <small class="text-red-600 italic"> {{ $errors->first('last_name') }}</small>@enderror
+        </div>
         <div class="form-group mb-6">
             <input type="hidden" value="{{$petition->id}}" name="petition_id">
             <input name="email" type="email" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="email"
@@ -43,8 +52,17 @@
                 Accepter les conditions d'utilisation*
             </label>
             @error('confirm_rule') <small class="text-red-600 italic"> {{ $errors->first('confirm_rule') }}</small>@enderror
-
         </div>
+        <div class="form-group form-check text-center mb-6">
+            <input name="statut" type="checkbox"
+                value="1" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-red-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+                id="statut">
+            <label class="form-check-label inline-block text-white" for="statut">
+                Recevoir la newsletter
+            </label>
+            @error('newsletter') <small class="text-red-600 italic"> {{ $errors->first('newsletter') }}</small>@enderror
+        </div>
+        
         <button type="submit" class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium
           text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg
           focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg 
