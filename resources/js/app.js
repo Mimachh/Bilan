@@ -78,8 +78,8 @@ Alpine.start();
     var nextElection = 1808604000000;
     var numberDayFromOldElection = (now - oldElection)/86400000;
     var diffDays = Math.ceil(Math.abs(now - nextElection)/ (1000 * 60 * 60 * 24));
-    var diffHours = Math.ceil(Math.abs(now - nextElection)/ (1000 * 60 * 60));
-    var diffMinutes = Math.ceil(Math.abs(now - nextElection)/ (1000 * 60));
+    //var diffHours = Math.ceil(Math.abs(now - nextElection)/ (1000 * 60 * 60));
+    //var diffMinutes = Math.ceil(Math.abs(now - nextElection)/ (1000 * 60));
     var diffDaysNode = document.getElementById('destitution');
     diffDaysNode.innerHTML = diffDays;
     var percentNextElection = (numberDayFromOldElection / diffDays) * 100;
@@ -90,6 +90,7 @@ Alpine.start();
             progressElection.style.width = `${percentNextElection}%`;
             progressElection.innerText = `${Math.round((percentNextElection) * 100) / 100}%`;
         }
+
       
         setInterval(function() {
 
@@ -200,26 +201,36 @@ Alpine.start();
     }, (1000 / 20));
 
 
-
-    
-
-    function shareOnFacebook(){
-    const counter = generalMigrantsCounter;
-    const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + 'http://127.0.0.1:8000/';
-    window.open(navUrl , '_blank');
-    }
-
-    function shareOnTwitter() {
-    const navUrl =
-    'https://twitter.com/intent/tweet?text=' +
-    'https://github.com/knoldus/angular-facebook-twitter.git';
-    window.open(navUrl, '_blank');
-    }
-
     const fb = document.getElementById('fb');
-    fb.addEventListener('click', shareOnFacebook);
+    fb.addEventListener('click', () => {
+        const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/';
+        window.open(navUrl , '_blank');
+    });
+
     const tweet = document.getElementById('twitter');
-    tweet.addEventListener('click', shareOnTwitter);
+    tweet.addEventListener('click', () => {
+        const navUrl =
+        'https://twitter.com/intent/tweet?text=' +
+        'Va visiter ce lien http://127.0.0.1:8000/, actuellement il y a '+Math.round(generalMigrantsCounter)+' migrants en France en 2023';
+        window.open(navUrl, '_blank');
+    });
+
+
+    const telegram = document.getElementById('telegram');
+    telegram.addEventListener('click', () => {
+        const navUrl = 'https://t.me/share/url?url={http://127.0.0.1:8000/}&text={Nombre actuel de migrants en France en 2023 : '+Math.round(generalMigrantsCounter)+'}';
+        window.open(navUrl, '_blank');
+    });
+
+    const whatsapp = document.getElementById('whatsapp');
+    whatsapp.addEventListener('click', () => {
+        const navUrl = 'whatsapp://send?text=Regarde l\'état de la France,'+Math.round(generalMigrantsCounter)+' migrants en France depuis le 1er janvier. D\'autre chiffres alarmants sur ce lien http://www.website.com';
+        window.open(navUrl, '_blank');
+    });
+
+   
+
+ 
     
     // TEST PROGRESS BAR
     //const progresss = document.querySelector('.progress-value');

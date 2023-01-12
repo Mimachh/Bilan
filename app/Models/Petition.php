@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Petition extends Model
 {
     use HasFactory;
+
+    public function signatures()
+    {
+        return $this->hasMany('App\Models\Signature');
+    }
 }

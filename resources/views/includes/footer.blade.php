@@ -27,6 +27,11 @@
                     Politiques du site
                 </a>
             </div>
+            <div class="px-5 py-2">
+                <a href="{{ route('petitions.index') }}" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Nos pétitions
+                </a>
+            </div>
         </nav>
         <div class="flex justify-center mt-8 space-x-6">
             <a href="#" class="text-gray-400 hover:text-gray-500">
