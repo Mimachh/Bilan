@@ -4,9 +4,10 @@ namespace App\Providers;
 
 use App\View\Components\Dons;
 use App\View\Components\Logo;
+use App\View\Components\Stats;
+use App\View\Components\Petitions;
 use Illuminate\Support\Facades\Blade;
 use App\View\Components\NavigationBar;
-use App\View\Components\Stats;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -32,5 +33,6 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('navigation-bar', NavigationBar::class);
         Blade::component('stats', Stats::class);
         Blade::component('dons', Dons::class);
+        Blade::component('petitions', Petitions::class);
     }
 }

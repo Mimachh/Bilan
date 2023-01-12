@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
-    <main>
+    <main class="">
         <x-logo/>
         <x-stats/>
-        <x-dons/>
+        <x-petitions/>
     </main>
 @endsection

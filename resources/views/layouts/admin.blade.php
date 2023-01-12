@@ -13,6 +13,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @vite(['resources/css/app.css', 'resources/css/perso.css'])
+        @livewireStyles
 
     </head>
     <body class="antialiased container bg-black-perso">
@@ -30,5 +31,6 @@
         }
     </script>
         @vite(['resources/js/app.js', 'resources/js/admin.js'])
+        @livewireScripts
     </body>
 </html>

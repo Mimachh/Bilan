@@ -23,7 +23,15 @@ Alpine.start();
 // Migrant Part With General Counter
     var migrants = 0;
     var migrants_by_day = 1370;
-    let migrantsForYear = migrants_by_day * dayYear;
+    var migrantsByDay = 1370;
+    var allMigrantsCounter = (numberDayFromJanuaryFirst * migrantsByDay);
+    var allMigrantsCounterNode = document.getElementById('allMigrantsCounterCounter');
+    allMigrantsCounterNode.innerHTML = Math.round(allMigrantsCounter);
+
+    setInterval(function() {
+        allMigrantsCounter += migrantsByDay / seconds;
+        allMigrantsCounterNode.innerHTML = Math.round(allMigrantsCounter);
+    }, 1000);
     //var generalMigrantsCounter = migrants + (numberDayFromJanuaryFirst * migrants_by_day);
     //var generalMigrantsCounterNode = document.getElementById('generalMigrantsCounter');
     //generalMigrantsCounterNode.innerHTML = Math.round(generalMigrantsCounter);
@@ -31,13 +39,13 @@ Alpine.start();
     
 // Illegal Migrants
     var illegalMigrantsByDay = 274;
-    var illegalGeneralMigrantsCounter = migrants + (numberDayFromJanuaryFirst * illegalMigrantsByDay);
+    var illegalGeneralMigrantsCounter = (numberDayFromJanuaryFirst * illegalMigrantsByDay);
     var illegalGeneralMigrantsCounterNode = document.getElementById('illegalGeneralMigrantsCounter');
     illegalGeneralMigrantsCounterNode.innerHTML = Math.round(illegalGeneralMigrantsCounter);
 
 // Legal Migrants
     var legalMigrantsByDay = 1095.89;
-    var legalGeneralMigrantsCounter = migrants + (numberDayFromJanuaryFirst * legalMigrantsByDay);
+    var legalGeneralMigrantsCounter = (numberDayFromJanuaryFirst * legalMigrantsByDay);
     var legalGeneralMigrantsCounterNode = document.getElementById('legalGeneralMigrantsCounter');
     legalGeneralMigrantsCounterNode.innerHTML = Math.round(legalGeneralMigrantsCounter);
         
@@ -49,12 +57,12 @@ Alpine.start();
     var numberStart = 0;
     // Coups et blessures
     var delinquanceByDay = 843.01;
-    var delinquanceTotalCounter = numberStart + (numberDayFromJanuaryFirst * delinquanceByDay);
+    var delinquanceTotalCounter = (numberDayFromJanuaryFirst * delinquanceByDay);
     var delinquanceTotalCounterNode = document.getElementById('delinquanceTotalCounter');
     delinquanceTotalCounterNode.innerHTML = Math.round(delinquanceTotalCounter);     
     // Viols 
     var rapeByDay = 205;
-    var rapeTotalCounter = numberStart + (numberDayFromJanuaryFirst * rapeByDay);
+    var rapeTotalCounter = (numberDayFromJanuaryFirst * rapeByDay);
     var rapeTotalCounterNode = document.getElementById('rapeTotalCounter');
     rapeTotalCounterNode.innerHTML = Math.round(rapeTotalCounter);
         
@@ -62,7 +70,7 @@ Alpine.start();
 // ECONOMY PART        
     // Deficit Cumul
     var deficitByDay = 452054794.5;
-    var deficitTotalCounter = numberStart + (numberDayFromJanuaryFirst * deficitByDay);
+    var deficitTotalCounter = (numberDayFromJanuaryFirst * deficitByDay);
     var deficitTotalCounterNode = document.getElementById('deficitTotalCounter');
     deficitTotalCounterNode.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(deficitTotalCounter)
         
@@ -152,9 +160,6 @@ Alpine.start();
         //LegalGeneralMigrants
         legalGeneralMigrantsCounter += (legalMigrantsByDay / seconds);
         legalGeneralMigrantsCounterNode.innerHTML = Math.round(legalGeneralMigrantsCounter);
-        //General migrants
-        generalMigrantsCounter = (legalGeneralMigrantsCounter + illegalGeneralMigrantsCounter);
-        generalMigrantsCounterNode.innerHTML = Math.round(generalMigrantsCounter);
         //TodayMigrants
         //migrantsCounterFromToday += (migrantsCounterFromToday / seconds);
         //migrantsCounterFromTodayNode.innerHTML = Math.round(migrantsCounterFromToday);

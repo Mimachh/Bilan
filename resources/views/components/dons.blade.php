@@ -1,4 +1,4 @@
-<section class="h-screen bg-black-perso">
+<section class="min-h-screen bg-black-perso">
     <div class="mb-24 pt-24 text-center space-x-6 text-5xl font-bold">
         <h2 class="inline text-violet-rose-perso ">Pour nous soutenir</h2> 
     </div>
@@ -8,4 +8,5 @@
         <button class="hover:bg-red-700 bg-blue-perso font-semibold px-12 py-2 rounded-2xl">FAIRE UN DON</button>
         </div>
     </div>
+    <hr>
 </section>

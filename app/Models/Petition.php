@@ -9,6 +9,11 @@ class Petition extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'statut',
+    ];
+
     public function signatures()
     {
         return $this->hasMany('App\Models\Signature');

@@ -15,14 +15,14 @@
         @vite(['resources/css/app.css', 'resources/css/perso.css'])
 
     </head>
-    <body class="antialiased container bg-black-perso">
+    <body class="antialiased bg-black-perso">
        
 
-        <div id="main" class="row">
+        <div>
                 @yield('content')
         </div>
 
-        <footer class="row">
+        <footer class="">
             @include('includes.footer')
         </footer>
 

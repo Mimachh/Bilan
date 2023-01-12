@@ -1,5 +1,5 @@
 <section class="bg-black-perso">
-    <div class="space-y-8 h-screen place-content-center grid justify-items-center text-5xl font-bold">
+    <div class="space-y-8 min-h-screen place-content-center grid justify-items-center text-5xl font-bold">
         <div class="space-y-4">
             <h1 class="inline text-white">Merci</h1> 
             <h2 class="inline text-blue-perso">Macron</h2>

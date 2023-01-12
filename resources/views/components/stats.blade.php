@@ -1,4 +1,4 @@
-<section class="pt-12 h-screen bg-black-perso">
+<section class="pt-12 min-h-screen bg-black-perso">
     <div class="pb-12 px-12 grid grid-cols-3 gap-4">
         <div class="space-y-4 col-span-3 md:col-span-2 bg-gray-200 px-4 py-4 rounded">
             <h2 class="mt-2 text-center text-2xl font-bold text-violet-rose-perso">Depuis le 1er Janvier 2023</h2>      
@@ -6,7 +6,7 @@
             <div>
                 <h2 class="underline text-lg font-semibold" title="Les chiffres de l'immigration en France">Les chiffres de l'immigration</h2>
                 <h3 class="text-gray-700 font-semibold" title="Immigration totale en France">Immigration totale : 
-                    <span class="text-gray-900" id="generalMigrantsCounter" title="Immigration totale en France"></span>
+                    <span class="text-gray-900" id="allMigrantsCounterCounter" title="Immigration totale en France"></span>
                     <!--dont <span class="italic text-blue-perso" id="migrantsCounterFromToday"></span>
                     aujourd'hui.-->
                 </h3>

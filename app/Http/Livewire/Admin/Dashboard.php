@@ -9,7 +9,32 @@ class Dashboard extends Component
     public $currentPage = 1;
     
     public $pages = [ 1=>1, 2=>2, 3=>3, 4=>4, 5=>5, 6=>6, 7=>7];
-    
+
+    public function goToHome()
+    {
+        $this->currentPage = 1;
+    }
+
+    public function goToNewsletters()
+    {
+        $this->currentPage = 2;
+    }
+
+    public function goToPetitions()
+    {
+        $this->currentPage = 3;
+    }
+
+    public function goToMessages()
+    {
+        $this->currentPage = 4;
+    }
+
+    public function goToFAQ()
+    {
+        $this->currentPage = 5;
+    }
+
     public function render()
     {
         return view('livewire.admin.dashboard');
