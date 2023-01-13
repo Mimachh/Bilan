@@ -7,25 +7,12 @@
                 <h2 class="underline text-md font-semibold" title="Les chiffres de l'immigration en France">Les chiffres de l'immigration</h2>
                 <h3 class="text-gray-400 text-sm font-semibold" title="Immigration totale en France">Immigration totale : 
                     <span class="" id="allMigrantsCounterCounter" title="Immigration totale en France"></span>
-                    <!--dont <span class="italic text-blue-perso" id="migrantsCounterFromToday"></span>
-                    aujourd'hui.-->
                 </h3>
-                    <!-- <div class="ml-4 progressMigrantsTotal">
-                        <div class="progress-migrants-total-value"></div>
-                    </div> -->
-                
-                    <!--  <div class="mx-auto progressMigrantsToday">
-                            <div class="progress-migrants-today-value"></div>
-                        </div> -->
-
                 <h3 class="text-gray-400 text-sm font-semibold" title="Immigration illégale en France">Immigration illégale : 
                     <span id="illegalGeneralMigrantsCounter" title="Immigration illégale en France"></span>
-                    <!--dont <span id="illegalMigrantsCounterFromToday"></span>
-                    aujourd'hui.-->
                 </h3>
                 <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration légale en France">Immigration légale : 
                     <span  id="legalGeneralMigrantsCounter" title="Immigration légale en France"></span>
-                    <!--dont <span id="legalMigrantsCounterFromToday"></span>-->
                 </h3>
             </div>
 
@@ -34,14 +21,10 @@
                 <h2 class="underline text-md font-semibold" title="Les chiffres de la violence en France">Les chiffres de la violence en France</h2>
                 <h3 class="text-gray-400 text-sm font-semibold" title="Coups et blessures en France">Coups et blessures : 
                     <span id="delinquanceTotalCounter" title="Coups et blessures en France"></span>
-                    <!--dont <span id="delinquanceCounterFromToday"></span>
-                    aujourd'hui.-->
                 </h3>
 
                 <h3 class="text-gray-400 font-semibold" title="Viols en France">Viols : 
                     <span id="rapeTotalCounter" title="Viols en France"></span>
-                    <!--dont <span id="rapeCounterFromToday"></span>
-                    aujourd'hui.-->
                 </h3>
             </div>
 
