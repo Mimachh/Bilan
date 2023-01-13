@@ -1,12 +1,12 @@
 <section class="pt-12 min-h-screen bg-black-perso">
     <div class="pb-12 px-12 grid grid-cols-3 gap-4">
-        <div class="space-y-4 col-span-3 md:col-span-2 bg-gray-200 px-4 py-4 rounded">
-            <h2 class="mt-2 text-center text-2xl font-bold text-violet-rose-perso">Depuis le 1er Janvier 2023</h2>      
+        <div class="shadow shadow-white space-y-4 col-span-3 md:col-span-2 text-white px-4 py-4 rounded">
+            <h2 class="mt-2 text-center text-xl font-bold">Depuis le 1er Janvier 2023</h2>      
             <!-- Immigration Part -->
             <div>
-                <h2 class="underline text-lg font-semibold" title="Les chiffres de l'immigration en France">Les chiffres de l'immigration</h2>
-                <h3 class="text-gray-700 font-semibold" title="Immigration totale en France">Immigration totale : 
-                    <span class="text-gray-900" id="allMigrantsCounterCounter" title="Immigration totale en France"></span>
+                <h2 class="underline text-md font-semibold" title="Les chiffres de l'immigration en France">Les chiffres de l'immigration</h2>
+                <h3 class="text-gray-400 text-sm font-semibold" title="Immigration totale en France">Immigration totale : 
+                    <span class="" id="allMigrantsCounterCounter" title="Immigration totale en France"></span>
                     <!--dont <span class="italic text-blue-perso" id="migrantsCounterFromToday"></span>
                     aujourd'hui.-->
                 </h3>
@@ -18,28 +18,28 @@
                             <div class="progress-migrants-today-value"></div>
                         </div> -->
 
-                <h3 class="text-gray-700 font-semibold" title="Immigration illégale en France">Immigration illégale : 
-                    <span class="text-gray-900" id="illegalGeneralMigrantsCounter" title="Immigration illégale en France"></span>
+                <h3 class="text-gray-400 text-sm font-semibold" title="Immigration illégale en France">Immigration illégale : 
+                    <span id="illegalGeneralMigrantsCounter" title="Immigration illégale en France"></span>
                     <!--dont <span id="illegalMigrantsCounterFromToday"></span>
                     aujourd'hui.-->
                 </h3>
-                <h3 class="text-gray-700 font-semibold" title="Immigration légale en France">Immigration légale : 
-                    <span class="text-gray-900" id="legalGeneralMigrantsCounter" title="Immigration légale en France"></span>
+                <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration légale en France">Immigration légale : 
+                    <span  id="legalGeneralMigrantsCounter" title="Immigration légale en France"></span>
                     <!--dont <span id="legalMigrantsCounterFromToday"></span>-->
                 </h3>
             </div>
 
             <!-- Violence Part -->
             <div>
-                <h2 class="underline text-lg font-semibold" title="Les chiffres de la violence en France">Les chiffres de la violence en France</h2>
-                <h3 class="text-gray-700 font-semibold" title="Coups et blessures en France">Coups et blessures : 
-                    <span class="text-gray-900" id="delinquanceTotalCounter" title="Coups et blessures en France"></span>
+                <h2 class="underline text-md font-semibold" title="Les chiffres de la violence en France">Les chiffres de la violence en France</h2>
+                <h3 class="text-gray-400 text-sm font-semibold" title="Coups et blessures en France">Coups et blessures : 
+                    <span id="delinquanceTotalCounter" title="Coups et blessures en France"></span>
                     <!--dont <span id="delinquanceCounterFromToday"></span>
                     aujourd'hui.-->
                 </h3>
 
-                <h3 class="text-gray-700 font-semibold" title="Viols en France">Viols : 
-                    <span class="text-gray-900" id="rapeTotalCounter" title="Viols en France"></span>
+                <h3 class="text-gray-400 font-semibold" title="Viols en France">Viols : 
+                    <span id="rapeTotalCounter" title="Viols en France"></span>
                     <!--dont <span id="rapeCounterFromToday"></span>
                     aujourd'hui.-->
                 </h3>
@@ -47,12 +47,12 @@
 
             <!-- Economy Part -->
             <div>
-                <h2 class="underline text-lg font-semibold" title="Economie française">Les chiffres de l'économie en France</h2>
-                <h3 class="text-gray-700 font-semibold" title="Dette publique">Montant total de la dette publique : 
-                    <span class="text-gray-900" id="detteTotalCounter" title="Dette publique"></span>
+                <h2 class="underline text-md font-semibold" title="Economie française">Les chiffres de l'économie en France</h2>
+                <h3 class="text-gray-400 text-sm font-semibold" title="Dette publique">Montant total de la dette publique : 
+                    <span id="detteTotalCounter" title="Dette publique"></span>
                 </h3>
-                <h3 class="text-gray-700 font-semibold" title="deficits cumulés">Déficits publics cumulés depuis le 1er Janvier : 
-                    <span class="text-gray-900" id="deficitTotalCounter" title="deficits cumulés"></span></h3>
+                <h3 class="text-gray-400 text-sm font-semibold" title="deficits cumulés">Déficits publics cumulés depuis le 1er Janvier : 
+                    <span id="deficitTotalCounter" title="deficits cumulés"></span></h3>
                 <h3 class="text-gray-700 font-semibold">
                     <!--dont <span id="deficitCounterFromToday"></span>
                     aujourd'hui.-->

@@ -1,6 +1,7 @@
 import './bootstrap';
 
 import Alpine from 'alpinejs';
+import { countBy } from 'lodash';
 
 window.Alpine = Alpine;
 
@@ -93,7 +94,6 @@ Alpine.start();
             progressElection.innerText = `${Math.round((percentNextElection) * 100) / 100}%`;
         }
 
-      
         setInterval(function() {
 
         }, 1000, changeWidthProgressElection());
@@ -103,9 +103,9 @@ Alpine.start();
 
     setInterval(function() {
         //IllegalGeneralMigrants
-        illegalGeneralMigrantsCounter += (illegalGeneralMigrantsCounter / 3600);
+        illegalGeneralMigrantsCounter += (illegalGeneralMigrantsCounter / seconds );
         illegalGeneralMigrantsCounterNode.innerHTML = Math.round(illegalGeneralMigrantsCounter);
-    }, 60000);
+    }, 1000);
     setInterval(function() {
         //LegalGeneralMigrants
         legalGeneralMigrantsCounter += (legalMigrantsByDay / seconds);
