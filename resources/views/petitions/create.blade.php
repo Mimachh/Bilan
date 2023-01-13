@@ -5,11 +5,11 @@
 <div class="grid text-red-600 md:grid-cols-3 gap-4">
   <div class="md:col-span-2 bg-black-perso space-y-8 px-4 md:pr-8 py-4">
     @livewire('button-back')
-    <div>
-        image 
+    <div class="">
+        <img class="rounded w-full h-1/2" src="{{ asset('storage/petitions/' . $petition->photo) }}" alt="">
     </div>
     <div class="space-y-2">
-        <h1 class="font-bold text-md">Titre principal</h1>
+        <h1 class="font-bold text-md mb-12">Titre principal</h1>
         <!-- Progress bar -->
         <div class="w-full px-4 lg:w-5/12">
             <div class="my-8">

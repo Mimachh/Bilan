@@ -98,11 +98,11 @@ class PetitionController extends Controller
      */
     public function show(Petition $petition)
     {
-        $petition_id = $petition->id;
+            $petition_id = $petition->id;
         
-        return view('petitions.show',[ 
-        'petition_id' => $petition_id,
-        'petition' => $petition,]);
+            return view('petitions.show',[ 
+            'petition_id' => $petition_id,
+            'petition' => $petition,]);  
     }
 
     /**

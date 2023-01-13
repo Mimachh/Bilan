@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Merci Macron, Bravo Macron, Bilan Macron, Immigration, Violence, France">
+        <meta name="description" content="Un bilan en temps réel du président Emmanuel Macron...">
+
 
         <title>Bravo Macron</title>
 
