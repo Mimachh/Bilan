@@ -33,9 +33,18 @@ class PetitionController extends Controller
     public function create(Petition $petition)
     {
         $responses = Response::all();
+
+        $objectif_first_step = 100;
+        $objectif_final = 50000;
+        $percent_objectif = 0;
+        $percent_objectif = ($petition->signatures->count() * 100) / $objectif_first_step;
+
         return view('petitions.create',[ 
             'petition' => $petition,
             'responses' => $responses,
+            'objectif_first_step' => $objectif_first_step,
+            'objectif_final' => $objectif_final,
+            'percent_objectif' => $percent_objectif,
         ]);
     }
 

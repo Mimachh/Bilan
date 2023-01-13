@@ -27,7 +27,7 @@ Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 /* Petitions routes */
 Route::get('/petitions/confirmation', function() { return view('petitions.confirmation'); })->name('petitions.confirmation');
 Route::resource('/petitions', PetitionController::class)->except('create');
-Route::get('petitions/create/{petition}', [PetitionController::class, 'create'])->name('petitions.create');
+Route::get('petitions/signature/{petition}', [PetitionController::class, 'create'])->name('petitions.signature');
 
 /* Delete route*/
 Route::get('/test', [TestController::class, 'index'])->name('natalite.index');

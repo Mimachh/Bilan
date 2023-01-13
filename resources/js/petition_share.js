@@ -1,7 +1,7 @@
 
 // Share the petition page
 
-const URL = 'http://127.0.0.1:8000/petitions/create/1';
+const URL = 'http://127.0.0.1:8000/petitions/signature/1';
 const fbPetition = document.getElementById('fb_petition');
 fbPetition.addEventListener('click', () => {
     const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + URL;

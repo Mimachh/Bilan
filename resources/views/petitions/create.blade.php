@@ -3,14 +3,27 @@
 
 <section class="bg-black-perso min-h-screen md:relative">
 <div class="grid text-red-600 md:grid-cols-3 gap-4">
-  <div class="md:col-span-2 bg-green-500 space-y-8 px-4 md:pr-8 py-4">
-  @livewire('button-back')
+  <div class="md:col-span-2 bg-black-perso space-y-8 px-4 md:pr-8 py-4">
+    @livewire('button-back')
     <div>
         image 
     </div>
     <div class="space-y-2">
         <h1 class="font-bold text-md">Titre principal</h1>
-        barre de progression
+        <!-- Progress bar -->
+        <div class="w-full px-4 lg:w-5/12">
+            <div class="my-8">
+                <div class="bg-white relative h-[10px] w-full rounded-2xl">
+                    <div class="bg-red-600 absolute top-0 left-0 h-full rounded-2xl" style="width:{{$percent_objectif}}%;">
+                        <span class="bg-red-600 absolute -right-4 bottom-full mb-2 rounded-sm py-1 px-2 text-xs font-semibold text-white">
+                        <span class="bg-red-600 absolute bottom-[-2px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm"></span>
+                        {{$percent_objectif}}%
+                        </span>
+                    </div>
+                </div>
+                <p>Notre objectif : {{ $objectif_first_step }} signatures</p>
+            </div>
+        </div>
     </div>
     <div class="space-y-2">
         <h1 class="font-bold text-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet error expedita facilis voluptates, repellendus beatae ex. Distinctio delectus, tenetur, aliquam adipisci consequuntur quos dignissimos, rerum cum quis sapiente dolores mollitia!</h1>
@@ -42,7 +55,7 @@
     </div>
     <!-- Button share -->
     <div class="flex justify-end space-x-1 pt-4">
-        <h3 class="italic text-black">Partager sur :</h3>
+        <h3 class="italic text-white">Partager sur :</h3>
         <div>
             <button id="telegram_petition" title="telegram">
                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" aria-label="Telegram" role="img" viewBox="0 0 512 512" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect width="512" height="512" rx="15%" fill="#37aee2"></rect><path fill="#c8daea" d="M199 404c-11 0-10-4-13-14l-32-105 245-144"></path><path fill="#a9c9dd" d="M199 404c7 0 11-4 16-8l45-43-56-34"></path><path fill="#f6fbfe" d="M204 319l135 99c14 9 26 4 30-14l55-258c5-22-9-32-24-25L79 245c-21 8-21 21-4 26l83 26 190-121c9-5 17-3 11 4"></path></g></svg>

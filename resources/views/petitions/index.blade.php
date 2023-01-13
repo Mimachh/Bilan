@@ -10,7 +10,7 @@
         <div class="hover:bg-gray-800 shadow hover:shadow-red-600 hover:shadow-md border border-1 px-3">
             <h2 class="text-white">{{ $petition->title }}</h2>
             <div class="my-1.5">
-                <a class="hover:bg-cyan-400 hover:text-black text-white bg-blue-perso px-1 py-1 rounded" href="{{ route('petitions.create', $petition) }}">Aller voter</a>
+                <a class="hover:bg-cyan-400 hover:text-black text-white bg-blue-perso px-1 py-1 rounded" href="{{ route('petitions.signature', $petition) }}">Aller voter</a>
             </div>
             <div class="text-gray-200">
                 @if($petition->signatures->count() > 0)
