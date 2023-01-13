@@ -5,4 +5,6 @@
         <x-stats/>
         <x-petitions/>
     </main>
+
+@vite('resources/js/main_page.js')
 @endsection

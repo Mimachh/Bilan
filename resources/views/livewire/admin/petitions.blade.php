@@ -5,14 +5,24 @@
                 <form class="bg-white rounded-lg px-4 py-5 mt-2 shadow hover:shadow-xl">
                         <!-- Title -->
                         <div class="mb-3 text-center space-y-2">
-                            <label class="underline font-semibold" for="name">Titre de la pétition</label>
-                            <input type="text" wire:model="state.title" id="name"/>
-                            @error('title') <small class="text-red-600 italic">{{ $title }}</small> @enderror
+                            <label class="underline font-semibold" for="title">Titre de la pétition</label>
+                            <input class="w-full border" type="text" wire:model="state.title" id="title"/>
+                            @error('title') <small class="text-red-600 italic">{{ $message }}</small> @enderror
                         </div>
                         <div class="mb-3 text-center space-y-2">
-                            <label class="underline font-semibold" for="name">Statut</label>
+                            <label class="underline font-semibold" for="description">Description</label>
+                            <textarea class="border w-full" wire:model="state.description" name="description" id="description" cols="30" rows="10"></textarea>
+                            @error('description') <small class="text-red-600 italic">{{ $message }}</small> @enderror
+                        </div>
+                        <div class="mb-3 text-center space-y-2">
+                            <label class="underline font-semibold" for="name">En ligne ?</label>
                             <input type="checkbox" wire:model="state.statut" id="statut"/>
-                            @error('statut') <small class="text-red-600 italic">{{ $statut }}</small> @enderror
+                            @error('statut') <small class="text-red-600 italic">{{ $message }}</small> @enderror
+                        </div>
+                        <div class="mb-3 text-center space-y-2">
+                            <label class="underline font-semibold" for="name">Photo</label>
+                            <input type="file" wire:model="state.photo" id="photo">
+                            @error('photo') <small class="text-red-600 italic">{{ $message }}</small> @enderror
                         </div>
                     <!-- Buttons -->
                     <div class="mb-3 text-center">

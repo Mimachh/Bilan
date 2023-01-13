@@ -12,6 +12,8 @@ class Petition extends Model
     protected $fillable = [
         'title',
         'statut',
+        'photo',
+        'description',
     ];
 
     public function signatures()

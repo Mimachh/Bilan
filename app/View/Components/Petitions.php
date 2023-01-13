@@ -28,7 +28,9 @@ class Petitions extends Component
         $petitions = Petition::where('statut', 1)->paginate(1);
         $objectif_first_step = 100;
         $objectif_final = 50000;
+        $percent_objectif = 0;
         foreach($petitions as $petition){
+            
             $percent_objectif = ($petition->signatures->count() * 100) / $objectif_first_step;
         }
         

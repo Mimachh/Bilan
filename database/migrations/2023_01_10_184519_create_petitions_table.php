@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('petitions', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('description');
+            $table->string('photo')->nullable();
             $table->integer('statut')->default(2);
             $table->timestamps();
         });
