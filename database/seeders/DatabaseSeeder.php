@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         DB::table('petitions')->insert([
-            ['id' => '1', 'title' => 'Pour ou Contre Macron en 2027?', 'statut' => 1, 'description' => 'Une description'],
+            ['id' => '1', 'title' => 'Pour ou Contre Macron en 2027?', 'statut' => 1, 'description' => 'Une description', 'objectif' => 100],
 
         ]);
 

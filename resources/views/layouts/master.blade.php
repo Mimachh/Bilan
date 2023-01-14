@@ -17,18 +17,22 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @vite(['resources/css/app.css', 'resources/css/perso.css'])
 
+        <div>
+            @include('includes.navbar')
+       </div>
     </head>
-    <body class="antialiased bg-black-perso">
-       
+    <body class="font-tommy antialiased">
+
 
         <div>
                 @yield('content')
         </div>
 
-        <footer class="">
+        <footer>
             @include('includes.footer')
         </footer>
 
         @vite('resources/js/app.js')
+        <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
     </body>
 </html>

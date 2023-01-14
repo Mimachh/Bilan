@@ -1,8 +1,18 @@
 /* MAIN */
 
+@import url('https://fonts.cdnfonts.com/css/made-tommy-outline');
+
+.bg-nav {
+  background: rgb(80,0,199);
+  background: linear-gradient(15deg, rgba(80,0,199,1) 20%, rgba(0,74,212,1) 78%);
+}
 .bg-black-perso
 {
     background-color: #171a1d;
+}
+
+.bg-footer {
+  background-color: #003366;
 }
 
 .text-black-perso
@@ -22,12 +32,12 @@
 
 .bg-blue-perso
 {
-    background-color: #3366ff;
+    background-color: #004ad4;
 }
 
 .text-blue-perso
 {
-    color: #3366ff;
+    color: #004ad4;
 }
 
 /* PROGRESS BAR */
@@ -122,6 +132,12 @@
   transition: 1s ease 0.3s;
 }
 
+/* Welcome page */
+.bg-image {
+  background-image: url("/public/storage/macron.jpg");
+}
+
+
 /* Confirmation message send page */
 
 .swal-icon--success {
@@ -134,7 +150,7 @@
     position: absolute;
     width: 60px;
     height: 120px;
-    background: #171a1d;
+    background: white;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
   }
@@ -176,7 +192,7 @@
   .swal-icon--success__hide-corners {
     width: 5px;
     height: 90px;
-    background-color: #171a1d;
+    background-color: white;
     padding: 1px;
     position: absolute;
     left: 28px;

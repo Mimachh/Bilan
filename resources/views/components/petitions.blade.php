@@ -16,7 +16,7 @@
             <div class="ml-6" id="objectifPetition">
                 <div class="flex text-lg progressPetition">
                     <div class="progress-petition-value" style="width:{{$percent_objectif}}%;">{{$percent_objectif}}%</div>
-                    <span class="pl-12 pt-1 text-sm">Objectif actuel : {{ $objectif_first_step }}</span>
+                    <span class="pl-12 pt-1 text-sm">Objectif actuel : {{ $petition->objectif }}</span>
                 </div>
             </div> 
             <div class="my-1.5">

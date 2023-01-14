@@ -14,7 +14,7 @@ class FaqController extends Controller
      */
     public function index()
     {
-        $faqs = Faq::all();
+        $faqs = Faq::where('statut', 1)->get();
 
         return view('faq', ['faqs' => $faqs]);
     }

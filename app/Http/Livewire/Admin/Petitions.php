@@ -37,7 +37,8 @@ class Petitions extends Component
             'title' => 'required|max:60',
             'statut' => 'nullable|boolean',
             'photo' => 'required|image|max:2048',
-            'description' => 'required|max:255',         
+            'description' => 'required|max:255',
+            'objectif' => 'required|integer',        
         ],[  
             'title.required' => 'Un nom est requis !',
             'title.max' => 'Le nom ne doit pas dépasser 60 caractères !',
@@ -46,6 +47,8 @@ class Petitions extends Component
             'photo.max' => 'La photo est trop lourde !',
             'description.required' => 'La description est obligatoire !',
             'description.max' => 'La description est trop longue !',
+            'objectif.required' => 'Un objectif est obligatoire !',
+            'objectif.integer' => 'L\'objectif doit être un nombre !',
         ]
         )->validate();
 
@@ -63,6 +66,7 @@ class Petitions extends Component
             'statut' => $this->state['statut'],
             'photo' => $name_file,
             'description' => $this->state['description'],
+            'objectif' => $this->state['objectif'],
         ]);
 
         $this->reset('state');
@@ -81,6 +85,7 @@ class Petitions extends Component
             'title' => $petition->title,
             'statut' => $petition->statut,
             'description' => $petition->description,
+            'objectif' => $petition->objectif,
         ];
 
     }
@@ -109,7 +114,8 @@ class Petitions extends Component
             'title' => 'required|max:60',
             'statut' => 'nullable|boolean',
             'photo' => 'nullable|image|max:2048',
-            'description' => 'required|max:255',         
+            'description' => 'required|max:255',
+            'objectif' => 'required|integer',        
         ],[  
             'title.required' => 'Un nom est requis !',
             'title.max' => 'Le nom ne doit pas dépasser 60 caractères !',
@@ -117,6 +123,9 @@ class Petitions extends Component
             'photo.max' => 'La photo est trop lourde !',
             'description.required' => 'La description est obligatoire !',
             'description.max' => 'La description est trop longue !',
+            'objectif.required' => 'Un objectif est obligatoire !',
+            'objectif.integer' => 'L\'objectif doit être un nombre !',
+
         ]
         )->validate();
 
@@ -142,6 +151,7 @@ class Petitions extends Component
                 'statut' => $this->state['statut'],
                 'photo' => $name_file,
                 'description' => $this->state['description'],
+                'objectif' => $this->state['objectif'],
             ]);
             
 

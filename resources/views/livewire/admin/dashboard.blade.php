@@ -85,12 +85,7 @@
 
     @if($currentPage === 5)
         <div class="ml-52 mt-10">
-        </div>
-    @endif
-
-    @if($currentPage === 6)
-        <div class="ml-52 mt-10">
-            @livewire('admin.f-a-q')
+            @livewire('admin.f-a-q-s')
         </div>
     @endif
 

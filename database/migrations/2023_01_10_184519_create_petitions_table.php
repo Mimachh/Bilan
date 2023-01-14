@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('photo')->nullable();
             $table->integer('statut')->default(2);
+            $table->integer('objectif');
             $table->timestamps();
         });
     }

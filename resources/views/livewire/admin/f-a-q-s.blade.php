@@ -1,33 +1,23 @@
-<div class="container flex justify-center mx-auto">
+<div class="container flex justify-center ml-96">
     <div class="flex flex-col">
         <div class="w-full">
                 @if($updateMode || $createMode)
                 <form class="bg-white rounded-lg px-4 py-5 mt-2 shadow hover:shadow-xl">
-                        <!-- Title -->
+                        <!-- Question -->
                         <div class="mb-3 text-center space-y-2">
-                            <label class="underline font-semibold" for="title">Titre de la pétition</label>
-                            <input class="w-full border" type="text" wire:model="state.title" id="title"/>
-                            @error('title') <small class="text-red-600 italic">{{ $message }}</small> @enderror
+                            <label class="underline font-semibold" for="question">Question</label>
+                            <input class="w-full border" type="text" wire:model="state.question" id="question"/>
+                            @error('question') <small class="text-red-600 italic">{{ $message }}</small> @enderror
                         </div>
                         <div class="mb-3 text-center space-y-2">
-                            <label class="underline font-semibold" for="objectif">Objectif fixé</label>
-                            <input class="w-full border" type="number" wire:model="state.objectif" id="objectif"/>
-                            @error('objectif') <small class="text-red-600 italic">{{ $message }}</small> @enderror
-                        </div>
-                        <div class="mb-3 text-center space-y-2">
-                            <label class="underline font-semibold" for="description">Description</label>
-                            <textarea class="border w-full" wire:model="state.description" name="description" id="description" cols="30" rows="10"></textarea>
-                            @error('description') <small class="text-red-600 italic">{{ $message }}</small> @enderror
+                            <label class="underline font-semibold" for="description">Réponse</label>
+                            <textarea class="border w-full" wire:model="state.answer" name="description" id="answer" cols="30" rows="10"></textarea>
+                            @error('answer') <small class="text-red-600 italic">{{ $message }}</small> @enderror
                         </div>
                         <div class="mb-3 text-center space-y-2">
                             <label class="underline font-semibold" for="name">En ligne ?</label>
                             <input type="checkbox" wire:model="state.statut" id="statut"/>
                             @error('statut') <small class="text-red-600 italic">{{ $message }}</small> @enderror
-                        </div>
-                        <div class="mb-3 text-center space-y-2">
-                            <label class="underline font-semibold" for="name">Photo</label>
-                            <input type="file" wire:model="state.photo" id="photo">
-                            @error('photo') <small class="text-red-600 italic">{{ $message }}</small> @enderror
                         </div>
                     <!-- Buttons -->
                     <div class="mb-3 text-center">
@@ -41,7 +31,7 @@
                 </form>
                 @endif
 
-            <h3 class="text-green-600 text-lg text-center mb-5"> {{ $petitions->count() }} Pétition(s) en ligne</h3>
+            <h3 class="text-green-600 text-lg text-center mb-5"> {{ $faqs->count() }} Questions de FAQ en ligne</h3>
             <div class="mb-2 text-cyan-600">
                 <button type=button wire:click="openForm" class="flex inline space-x-2">
                 
@@ -53,28 +43,28 @@
                     <thead class="bg-gray-200">
                         <tr class="px-6 py-2 text-xs text-gray-500 divide-x divide-gray-300">
                             <th class="px-4 py-4" scope="col">#</th>
-                            <th class="px-6 py-4"scope="col">Titre de la pétition</th>
-                            <th class="px-6 py-4" scope="col">Nombre de signataires</th>
+                            <th class="px-6 py-4"scope="col">Question</th>
+                            <th class="px-6 py-4" scope="col">Réponse</th>
                             <th class="px-6 py-4" scope="col">Statut</th>
                             <th class="px-6 py-4" scope="col"> -- </th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-300">
-                        @foreach ($petitions as $petition)
+                        @foreach ($faqs as $faq)
                             <tr class="whitespace-nowrap text-xs text-center text-gray-500 divide-x">
-                                <th class="bg-gray-200" scope="row">{{ $petition->id }}</th>
-                                <td>{{ $petition->title }}</td>
-                                <td>{{ $petition->signatures->count() }}</td>
+                                <th class="bg-gray-200" scope="row">{{ $faq->id }}</th>
+                                <td>{{ $faq->question }}</td>
+                                <td>{{ $faq->answer }}</td>
                                 <td>
-                                    @if($petition->statut === 1)
+                                    @if($faq->statut === 1)
                                         En ligne
                                     @else
                                         Hors ligne
                                     @endif
                                 </td>
                                 <td class="px-6 py-4">
-                                    <button wire:click.prevent="edit({{ $petition->id }})" type="button" class="px-4 py-1 text-sm text-blue-600 bg-blue-200 rounded-full">Modifier</button>
-                                    <button wire:click.prevent="delete({{ $petition->id }})" type="button" class="px-4 py-1 text-sm text-red-400 bg-red-200 rounded-full">Supprimer</button>
+                                    <button wire:click.prevent="edit({{ $faq->id }})" type="button" class="px-4 py-1 text-sm text-blue-600 bg-blue-200 rounded-full">Modifier</button>
+                                    <button wire:click.prevent="delete({{ $faq->id }})" type="button" class="px-4 py-1 text-sm text-red-400 bg-red-200 rounded-full">Supprimer</button>
                                 </td>
                             </tr>
                         @endforeach
@@ -86,4 +76,6 @@
         </div>
     </div>
 </div>
+
+
 

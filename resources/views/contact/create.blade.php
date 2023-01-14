@@ -1,13 +1,12 @@
 @extends('layouts.master')
 @section('content')
 
-<div class="container my-24 px-6 mx-auto bg-black-perso">
-@livewire('button-back')
+<div class="container my-24 px-6 mx-auto">
   <!-- Section: Design Block -->
-  <section class="mb-32 text-center text-white">
+  <section class="mb-32 text-center border py-12 rounded mt-2 shadow-lg">
     <div class="max-w-[700px] mx-auto px-3 lg:px-6">
       <h2 class="text-3xl font-bold mb-12">Nous contacter</h2>
-      <small>Les champs marqué de * sont obligatoires</small>
+      <small>Les champs marqués de * sont obligatoires</small>
       <form method="POST" action="{{ route('contact.store') }}">
         @csrf
         <div class="form-group mb-6">
@@ -51,7 +50,7 @@
             <input name="confirm_rule" type="checkbox"
                 value="1" class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
                 id="confirm_rule">
-            <label class="form-check-label inline-block text-white" for="confirm_rule">
+            <label class="form-check-label inline-block" for="confirm_rule">
                 Accepter les conditions d'utilisation*
             </label>
             @error('confirm_rule') <small class="text-red-600 italic"> {{ $errors->first('confirm_rule') }}</small>@enderror

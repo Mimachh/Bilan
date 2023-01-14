@@ -14,6 +14,7 @@ class Petition extends Model
         'statut',
         'photo',
         'description',
+        'objectif'
     ];
 
     public function signatures()

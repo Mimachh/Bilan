@@ -4,9 +4,15 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    './node_modules/tw-elements/dist/js/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            tommyoutline: ['MADE TOMMY Outline', 'sans-serif'],
+            tommy: ['MADE TOMMY', 'sans-serif'],
+        }
+    }
   },
-  plugins: [],
+  plugins: [require('tw-elements/dist/plugin')],
 }
