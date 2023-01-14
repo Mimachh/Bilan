@@ -57,4 +57,10 @@ Route::resource('contact', ContactController::class)->except('store');
 Route::post('contact/store', [ContactController::class, 'store'])->name('contact.store');
 Route::view('confirmation', 'contact.confirmation')->name('contact.confirmation');
 
+/* Statistiques routes */
 
+Route::prefix('statistiques')->group(function () {
+    Route::get('/immigration', function () { return view('stats.migration'); })->name('stats.migration');
+    Route::get('/economie', function () { return view('stats.economie'); })->name('stats.economie');
+    Route::get('/violences', function () { return view('stats.violences'); })->name('stats.violences');
+});
