@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('last_name');
             $table->string('email');
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->foreignId('subject_id')->constrained();
             $table->text('message');
             $table->boolean('confirm_rule');

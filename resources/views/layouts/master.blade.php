@@ -16,7 +16,6 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @vite(['resources/css/app.css', 'resources/css/perso.css'])
-
         <div>
             @include('includes.navbar')
        </div>
@@ -33,6 +32,5 @@
         </footer>
 
         @vite('resources/js/app.js')
-        <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
     </body>
 </html>

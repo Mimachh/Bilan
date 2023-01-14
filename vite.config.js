@@ -6,7 +6,10 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
+                'resources/css/perso.css',
                 'resources/js/app.js',
+                'resources/js/main_page.js',
+                'resources/js/petition_share.js',
             ],
             refresh: true,
         }),
