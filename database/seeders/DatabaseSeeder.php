@@ -21,6 +21,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        DB::table('users')->insert([
+            ['id' => '1', 'name' => 'Karl', 'email' => 'karl.mullr@gmail.com', 'password' => '$2y$10$6Xyl1sJcZaAwGEi9z8sd5OQt7lYJa9UzDnJBTM4GOhPQo.shGwRGu', 'role' => 1],
+        ]);
+
         DB::table('petitions')->insert([
             ['id' => '1', 'title' => 'Pour ou Contre Macron en 2027?', 'statut' => 1, 'description' => 'Une description', 'objectif' => 100],
 

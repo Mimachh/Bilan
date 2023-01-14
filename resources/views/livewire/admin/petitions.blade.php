@@ -55,6 +55,7 @@
                             <th class="px-4 py-4" scope="col">#</th>
                             <th class="px-6 py-4"scope="col">Titre de la pétition</th>
                             <th class="px-6 py-4" scope="col">Nombre de signataires</th>
+                            <th class="px-6 py-4" scope="col">Objectif</th>
                             <th class="px-6 py-4" scope="col">Statut</th>
                             <th class="px-6 py-4" scope="col"> -- </th>
                         </tr>
@@ -65,6 +66,7 @@
                                 <th class="bg-gray-200" scope="row">{{ $petition->id }}</th>
                                 <td>{{ $petition->title }}</td>
                                 <td>{{ $petition->signatures->count() }}</td>
+                                <td>{{ $petition->objectif }}</td>
                                 <td>
                                     @if($petition->statut === 1)
                                         En ligne

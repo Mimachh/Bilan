@@ -23,7 +23,7 @@
         @livewireStyles
     </head>
     <body class="antialiased">
-           <div class="text-red-600 dark:bg-gray-900">
+           <div class="text-red-600">
           
            </div>
 

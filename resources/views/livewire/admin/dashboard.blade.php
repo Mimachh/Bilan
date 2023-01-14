@@ -11,7 +11,7 @@
 
                     <!-- Partie Home -->
                     <li>
-                        <button wire:click="goToHome" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                        <button wire:click="goToHome" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
                             <p class="inline-flex justify-center items-center ml-2">Home</p>
                         </button>
                     </li>
@@ -19,7 +19,7 @@
 
                     <!-- Partie Newsletters -->
                     <li>
-                        <button wire:click="goToNewsletters" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                        <button wire:click="goToNewsletters" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
                             <p class="inline-flex justify-center items-center ml-2">Newsletters</p>
                         </button>
                     </li>
@@ -27,7 +27,7 @@
                     
                     <!-- Partie Pétitions-->
                     <li>
-                        <button wire:click="goToPetitions" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                        <button wire:click="goToPetitions" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
                             <p class="inline-flex justify-center items-center ml-2">Pétitions</p>
                         </button>
                     </li>
@@ -35,7 +35,7 @@
 
                     <!-- Partie Messages -->
                     <li>
-                        <button wire:click="goToMessages" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                        <button wire:click="goToMessages" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
                         <p class="inline-flex justify-center items-center ml-2">Messages</p>
                         </button>
                     </li>
@@ -43,16 +43,29 @@
 
                     <!-- Partie FAQ -->
                     <li>
-                        <button wire:click="goToFAQ" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                        <button wire:click="goToFAQ" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
                         <p class="inline-flex justify-center items-center ml-2">FAQ</p>
                         </button>
                     </li>
                     <!-- /Partie FAQ -->
 
                     <li>
-                        <a href="{{ route('/') }}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                        <a href="{{ route('/') }}" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
                             <span class="ml-2 tracking-wide truncate">Aller sur le site</span>
                         </a>
+                    </li>
+
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <a class="pl-2 relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6" 
+                                :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                Me déconnecter
+                            </a>
+                        </form>
                     </li>
                 </ul>
             </div>

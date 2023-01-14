@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
-use App\Http\Controllers\TestController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PetitionController;
 
 /*
@@ -16,6 +16,26 @@ use App\Http\Controllers\PetitionController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware(['auth', 'role:1'])->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    /* Admin route */
+    Route::get('/admin', function () {
+        return view('admin.dashboard');
+    })->name('/admin');
+
+});
+
+require __DIR__.'/auth.php';
+
 /* Route without controller */
 Route::get('/', function () {
     return view('welcome');
@@ -38,7 +58,3 @@ Route::post('contact/store', [ContactController::class, 'store'])->name('contact
 Route::view('confirmation', 'contact.confirmation')->name('contact.confirmation');
 
 
-/* Admin route */
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-})->name('/admin');

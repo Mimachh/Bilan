@@ -35,7 +35,7 @@
             <div class="mb-2 text-cyan-600">
                 <button type=button wire:click="openForm" class="flex inline space-x-2">
                 
-                    <p> Créer une nouvelle pétition</p>
+                    <p> Créer une nouvelle FAQ</p>
                 </button>
             </div>    
             <div class="border-b border-gray-200 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/60 shadow-cyan-500/50">
