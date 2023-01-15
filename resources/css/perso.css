@@ -135,7 +135,9 @@
 /* Welcome page */
 .bg-image {
   background-image: url("/public/storage/macron.jpg");
+  background-repeat: no-repeat;
 }
+
 
 
 /* Confirmation message send page */

@@ -41,6 +41,29 @@
                     </li>
                     <!-- /Partie Messages -->
 
+                    <!-- Partie testimonial -->
+                    <div class="py-1" x-data="{ open: false }">
+                        <button x-on:click="open = ! open" class="pl-2 w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">Témoignages</button>
+                        <div x-show="open">
+                            <li class="py-2">
+                                <button wire:click="goToTestimonialsWaiting" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
+                                <p class="inline-flex justify-center items-center ml-2">Témoignages en attente</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button wire:click="goToTestimonialsOnline" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
+                                <p class="inline-flex justify-center items-center ml-2">Témoignages en ligne</p>
+                                </button>
+                            </li>
+                            <li>
+                                <button wire:click="goToTestimonialsArchived" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
+                                <p class="inline-flex justify-center items-center ml-2">Témoignages archivés</p>
+                                </button>
+                            </li>
+                        </div>
+                    </div>
+                    <!-- /Partie testimonial -->
+
                     <!-- Partie FAQ -->
                     <li>
                         <button wire:click="goToFAQ" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
@@ -102,9 +125,21 @@
         </div>
     @endif
 
+    @if($currentPage === 6)
+        <div class="ml-52 mt-10">
+            @livewire('admin.testimonials-waiting')
+        </div>
+    @endif
+
     @if($currentPage === 7)
         <div class="ml-52 mt-10">
-            
+            @livewire('admin.testimonials-online')
+        </div>
+    @endif
+
+    @if($currentPage === 8)
+        <div class="ml-52 mt-10">
+            @livewire('admin.testimonials-archived')
         </div>
     @endif
 

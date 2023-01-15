@@ -35,6 +35,22 @@ class Dashboard extends Component
         $this->currentPage = 5;
     }
 
+    public function goToTestimonialsWaiting()
+    {
+        $this->currentPage = 6;
+    }
+
+    public function goToTestimonialsOnline()
+    {
+        $this->currentPage = 7;
+    }
+    
+    public function goToTestimonialsArchived()
+    {
+        $this->currentPage = 8;
+    }
+
+
     public function render()
     {
         return view('livewire.admin.dashboard');

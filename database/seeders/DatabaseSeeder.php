@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
         DB::table('statuts')->insert([
  
             ['id'=>'1', 'name' => 'En attente'],
-            ['id'=>'2', 'name' => 'Traité'],
+            ['id'=>'2', 'name' => 'Traité/Accepter'],
             ['id'=>'3', 'name' => 'Archivé'],
             
         ]);
@@ -61,6 +61,16 @@ class DatabaseSeeder extends Seeder
             ['id'=>'2', 'question' => 'Comment sont calculées les statistiques ?', 'answer' => 'patati'],
             ['id'=>'3', 'question' => 'Pourquoi certains chiffres reviennent en arrière parfois ?', 'answer' => 'patati'],
             ['id'=>'4', 'question' => 'Autre', 'answer' => 'patati'],
+        ]);
+
+        DB::table('testimonials')->insert([
+            ['id' => '1', 'content' => 'Bonjour', 'email' => 'karl.mullr@gmail.com', 'confirm_rule' => true],
+            ['id' => '2', 'content' => 'Bonjour', 'email' => 'karl.mullr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
+            ['id' => '3', 'content' => 'Bonjour', 'email' => 'karl.mullr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
+        ]);
+
+        DB::table('carousels')->insert([
+            ['id' => '1', 'content' => 'Bonjour', 'testimonial_id' => '2'],
         ]);
     }
 }

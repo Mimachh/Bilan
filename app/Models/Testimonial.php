@@ -5,20 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Signature extends Model
+class Testimonial extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'last_name',
-        'petition_id',
+        'content',
         'email',
+        'statut_id',
         'confirm_rule',
     ];
 
-    public function petition()
+    public function statut()
     {
-        return $this->belongsTo('App\Models\Petition');
+        return $this->belongsTo('App\Models\Statut');
     }
 }

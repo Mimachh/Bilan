@@ -5,6 +5,8 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PetitionController;
+use App\Http\Controllers\TestimonialController;
+use App\Models\Testimonial;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,9 +51,6 @@ Route::get('/petitions/confirmation', function() { return view('petitions.confir
 Route::resource('/petitions', PetitionController::class)->except('create');
 Route::get('petitions/signature/{petition}', [PetitionController::class, 'create'])->name('petitions.signature');
 
-/* Delete route*/
-Route::get('/test', [TestController::class, 'index'])->name('natalite.index');
-
 /* Contact routes */
 Route::resource('contact', ContactController::class)->except('store');
 Route::post('contact/store', [ContactController::class, 'store'])->name('contact.store');
@@ -63,4 +62,14 @@ Route::prefix('statistiques')->group(function () {
     Route::get('/immigration', function () { return view('stats.migration'); })->name('stats.migration');
     Route::get('/economie', function () { return view('stats.economie'); })->name('stats.economie');
     Route::get('/violences', function () { return view('stats.violences'); })->name('stats.violences');
+});
+
+
+/* Golden book */
+Route::resource('/temoignages', TestimonialController::class);
+
+Route::prefix('/temoignages')->group(function () {
+    Route::view('confirmation', 'testimonials.confirmation')->name('testimonials.confirmation');
+    Route::get('/', [TestimonialController::class, 'create'])->name('testimonials.create');
+    Route::POST('/', [TestimonialController::class, 'store'])->name('testimonials.store');
 });

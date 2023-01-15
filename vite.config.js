@@ -13,6 +13,7 @@ export default defineConfig({
                 'resources/js/migration.js',
                 'resources/js/economie.js',
                 'resources/js/violence.js',
+                'resources/js/testimonial.js',
             ],
             refresh: true,
         }),

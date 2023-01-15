@@ -5,12 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Statut extends Model
+class Carousel extends Model
 {
     use HasFactory;
-
-    public function testimonials()
-    {
-        return $this->hasMany('App\Models\Testimonial');
-    }
 }
