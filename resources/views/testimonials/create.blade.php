@@ -14,37 +14,27 @@
         <div id="carouselTemoignages" class="carousel slide carousel-fade relative"
             data-bs-ride="carousel">
             <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                @foreach($carousels as $carousel)
                 <button type="button" data-bs-target="#carouselTemoignages"
-                    data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                    data-bs-slide-to="{{ ($carousel->id) - 1 }}" class="{{ $carousel->id === 1 ? 'active' : ''}}" aria-current="true" aria-label="Slide {{$carousel->id}}">
                 </button>
-                <button type="button" data-bs-target="#carouselTemoignages"
+                @endforeach
+                <!-- <button type="button" data-bs-target="#carouselTemoignages"
                     data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselTemoignages"
                     data-bs-slide-to="2" aria-label="Slide 3">
                 </button>
+                <button type="button" data-bs-target="#carouselTemoignages"
+                    data-bs-slide-to="3" aria-label="Slide 4">
+                </button> -->
             </div>
             <div class="carousel-inner relative w-full overflow-hidden">
-                <div class="carousel-item active float-left w-full">
-                <img
-                    src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-                    class="block w-full"
-                    alt="Wild Landscape"
-                />
+                @foreach($carousels as $carousel)
+                <div class="bg-nav h-96 {{ $carousel->id === 1 ? 'active' : ''}} carousel-item float-left w-full">
+                {{$carousel->id}}
                 </div>
-                <div class="carousel-item float-left w-full">
-                <img
-                    src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-                    class="block w-full"
-                    alt="Camera"
-                />
-                </div>
-                <div class="carousel-item float-left w-full">
-                <img
-                    src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-                    class="block w-full"
-                    alt="Exotic Fruits"
-                />
-                </div>
+                @endforeach
+                
             </div>
             <button class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
                 type="button"

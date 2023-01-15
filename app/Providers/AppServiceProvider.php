@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\View\Components\Carousel;
 use App\View\Components\Dons;
 use App\View\Components\Logo;
 use App\View\Components\Stats;
@@ -34,5 +35,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('stats', Stats::class);
         Blade::component('dons', Dons::class);
         Blade::component('petitions', Petitions::class);
+        Blade::component('carousel', Carousel::class);
+
     }
 }

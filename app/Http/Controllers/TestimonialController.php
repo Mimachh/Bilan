@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carousel;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Models\NewsletterUser;
@@ -25,9 +26,9 @@ class TestimonialController extends Controller
      */
     public function create()
     {
-        
+        $carousels = Carousel::all();
         $testimonials = Testimonial::where('statut_id', 2)->get();
-        return view('testimonials.create', compact('testimonials'));
+        return view('testimonials.create', compact('carousels'));
     }
 
     /**
