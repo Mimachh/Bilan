@@ -1,17 +1,3 @@
-<section id="" class="bg-image bg-black-perso">
-    <div class="space-y-8 min-h-screen place-content-center grid justify-items-center font-bold">
-        <div class="text-sm text-white text-center">
-            <h3 class="mb-6">Le bilan déplorable en temps réel de son quinquenat.</h3>
-            <a class="bg-blue-perso px-4 py-2 rounded" href="#stats">Aller voir</a>
-        </div>
-        <div>
-            <p class="text-lg text-violet-rose-perso">Décollage prévu dans : <span id="destitution"></span> jours</p>
-            <div class="text-lg progressElection">
-                <div class="progress-election-value"></div>
-            </div>
-        </div> 
-    </div>
-</section>
 <section id="stats" class="pt-12 min-h-screen bg-black-perso">
     <div class="pb-12 px-12 grid grid-cols-3 gap-4">
         <div class="shadow shadow-white space-y-4 col-span-3 md:col-span-2 text-white px-4 py-4 rounded">
@@ -90,38 +76,4 @@
     </div>
     <hr>
 </section>
-<section class="min-h-screen pb-8">
-    <h2 class="mt-4 py-4 text-center text-white bg-nav text-xl font-bold">Quelles statistiques souhaites-tu <br> consulter ?</h2>
-    <div class="grid grid-cols-3 mx-4 gap-4 mt-8">
-        <a class=" hover:opacity-70" href="{{ route('stats.economie') }}">
-            <div>
-                <img class="shadow hover:shadow-xl" src="{{ asset('storage/economie.png') }}" alt="Logo de l'économie">
-            </div>
-        </a>
-        <a class="hover:opacity-70" href="">
-            <div>
-                <img class="shadow hover:shadow-xl" src="{{ asset('storage/société.png') }}" alt="Logo de l'économie">
-            </div>
-        </a>
-        <a class="hover:opacity-70" href="">
-            <div>
-                <img class="shadow hover:shadow-xl" src="{{ asset('storage/ruralité.png') }}" alt="Logo de l'économie">
-            </div>
-        </a>
-        <a class="hover:opacity-70" href="">
-            <div>
-                <img class="shadow hover:shadow-xl" src="{{ asset('storage/ecologie.png') }}" alt="Logo de l'économie">
-            </div>
-        </a>
-        <a class="hover:opacity-70" href="">
-            <div>
-                <img class="shadow hover:shadow-xl" src="{{ asset('storage/chomage.png') }}" alt="Logo de l'économie">
-            </div>
-        </a>
-        <a class="hover:opacity-70" href="">
-            <div>
-                <img class="shadow hover:shadow-xl" src="{{ asset('storage/insécurité.png') }}" alt="Logo de l'économie">
-            </div>
-        </a>
-    </div>
-</section>
+
