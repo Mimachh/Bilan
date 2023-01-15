@@ -2,9 +2,10 @@
 
 namespace App\View\Components;
 
+use App\Models\Carousel;
 use Illuminate\View\Component;
 
-class Carousel extends Component
+class Carousels extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +24,7 @@ class Carousel extends Component
      */
     public function render()
     {
-        return view('components.carousel');
+        $carousels = Carousel::all();
+        return view('components.carousels', compact('carousels'));
     }
 }
