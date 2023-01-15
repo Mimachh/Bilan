@@ -43,6 +43,8 @@ class TestimonialController extends Controller
             'content' => 'required|max:255',
             'email' => 'required|max:255|unique:testimonials,email',
             'confirm_rule' => 'required|boolean',
+            'name' => 'nullable|max:60',
+            'last_name' => 'nullable|max:60',
         ], [
             'content.required' => 'Le témoignage doit être renseigné',
             'content.max' => 'Votre témoignage est trop long, ne dépassez pas 255 caractères !',
@@ -51,6 +53,8 @@ class TestimonialController extends Controller
             'email.required' => 'Vous devez renseigner votre mail',
             'confirm_rule.required' => 'Vous devez accepter les conditions d\'utilisation',
             'confirm_rule.boolean' => 'Vous devez cocher les conditions d\'utilisation',
+            'last_name.max' => 'Votre prénom est trop long !',
+            'name.max' => 'Votre nom est trop long !',
         ]);
 
         $data2 = $request->validate([

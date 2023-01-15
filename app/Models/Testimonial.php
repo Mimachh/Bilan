@@ -14,6 +14,8 @@ class Testimonial extends Model
         'email',
         'statut_id',
         'confirm_rule',
+        'name',
+        'last_name',
     ];
 
     public function statut()
@@ -24,5 +26,11 @@ class Testimonial extends Model
     public function carousels()
     {
         return $this->belongsToMany('App\Models\Carousel');
+    }
+
+    public function created_at()
+    {
+        $date = $this->created_at;
+        return date('d/m/Y', strtotime($date));
     }
 }

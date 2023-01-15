@@ -64,13 +64,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('testimonials')->insert([
-            ['id' => '1', 'content' => 'Bonjour', 'email' => 'karl.muller@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
-            ['id' => '2', 'content' => 'Bonjour', 'email' => 'karl.mulr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
-            ['id' => '3', 'content' => 'Bonjour', 'email' => 'karl.mulelr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
-            ['id' => '4', 'content' => 'Bonjour', 'email' => 'karl.mulalr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
-            ['id' => '5', 'content' => 'Bonjour', 'email' => 'karl.mullzr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
-
-
+            ['id' => '1', 'content' => 'Bonjour', 'name' => 'Muller', 'last_name' => 'Karl', 'email' => 'karl.muller@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
+            ['id' => '2', 'content' => 'Bonjour', 'name' => 'Muller', 'last_name' => 'Karl', 'email' => 'karl.mulr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
+            ['id' => '3', 'content' => 'Bonjour', 'name' => 'Muller', 'last_name' => 'Karl', 'email' => 'karl.mulelr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
+            ['id' => '4', 'content' => 'Bonjour', 'name' => 'Muller', 'last_name' => 'Karl', 'email' => 'karl.mulalr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
+            ['id' => '5', 'content' => 'Bonjour', 'name' => 'Muller', 'last_name' => 'Karl', 'email' => 'karl.mullzr@gmail.com', 'confirm_rule' => true, 'statut_id' => '2'],
         ]);
 
         DB::table('carousels')->insert([

@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
             $table->string('content');
+            $table->string('name')->nullable();
+            $table->string('last_name')->nullable();
             $table->string('email')->unique();
             $table->foreignId('statut_id')->default(1)->constrained();
             $table->boolean('confirm_rule');

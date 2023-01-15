@@ -16,12 +16,11 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @vite(['resources/css/app.css', 'resources/css/perso.css'])
-        <div>
-            @include('includes.navbar')
-       </div>
     </head>
     <body class="font-tommy antialiased">
-
+        <div class="">
+            @include('includes.navbar')
+       </div>
 
         <div>
                 @yield('content')
