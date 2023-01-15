@@ -20,4 +20,9 @@ class Testimonial extends Model
     {
         return $this->belongsTo('App\Models\Statut');
     }
+
+    public function carousels()
+    {
+        return $this->belongsToMany('App\Models\Carousel');
+    }
 }

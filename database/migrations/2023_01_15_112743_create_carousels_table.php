@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('carousels', function (Blueprint $table) {
             $table->id();
-            $table->string('content');
             $table->foreignId('testimonial_id')->constrained();
             $table->timestamps();
         });

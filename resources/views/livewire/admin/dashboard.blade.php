@@ -64,6 +64,14 @@
                     </div>
                     <!-- /Partie testimonial -->
 
+                     <!-- Partie carousel -->
+                     <li>
+                        <button wire:click="goToCarousel" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
+                        <p class="inline-flex justify-center items-center ml-2">Carousels</p>
+                        </button>
+                    </li>
+                    <!-- /Partie carousel -->
+
                     <!-- Partie FAQ -->
                     <li>
                         <button wire:click="goToFAQ" type="button" class="w-full relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 pr-6">
@@ -140,6 +148,12 @@
     @if($currentPage === 8)
         <div class="ml-52 mt-10">
             @livewire('admin.testimonials-archived')
+        </div>
+    @endif
+
+    @if($currentPage === 9)
+        <div class="ml-52 mt-10">
+            @livewire('admin.carousels')
         </div>
     @endif
 

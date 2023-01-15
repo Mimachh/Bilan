@@ -50,6 +50,10 @@ class Dashboard extends Component
         $this->currentPage = 8;
     }
 
+    public function goToCarousel()
+    {
+        $this->currentPage = 9;
+    }
 
     public function render()
     {
