@@ -8,7 +8,7 @@
         <img class="rounded w-full h-1/2" src="{{ asset('storage/petitions/' . $petition->photo) }}" alt="">
     </div>
     <div class="space-y-2">
-        <h1 class="font-bold text-md mb-12">Titre principal</h1>
+        <h1 class="font-bold text-md mb-12">{{ $petition->title }}</h1>
         <!-- Progress bar -->
         <div class="w-full px-4 lg:w-5/12">
             <div class="my-8">
