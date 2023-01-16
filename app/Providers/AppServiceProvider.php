@@ -32,10 +32,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::component('Logo', Logo::class);
-        Blade::component('navigation-bar', NavigationBar::class);
         Blade::component('stats', Stats::class);
-        Blade::component('dons', Dons::class);
         Blade::component('petitions', Petitions::class);
         Blade::component('carousel', Carousel::class);
         Blade::component('categories', Categories::class);

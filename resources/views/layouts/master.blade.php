@@ -21,7 +21,6 @@
         <div class="">
             @include('includes.navbar')
        </div>
-
         <div>
                 @yield('content')
         </div>

@@ -1,5 +1,5 @@
 <nav class="flex flex-wrap items-center justify-between w-full
-          py-4 md:py-4 px-4 text-lg text-white bg-nav font-bold bg-transparent">
+          py-4 md:py-4 px-4 text-lg text-white bg-nav font-bold">
        <div>
           <a class="text-3xl font-black ml-4 tracking-wide" href="{{ route('/') }}">
             BRAVO MACRON.

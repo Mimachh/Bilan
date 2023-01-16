@@ -1,6 +1,5 @@
-<hr>
-<section class="bg-nav py-12 max-h-screen">
-    <h2 class="text-center text-2xl font-bold py-4">Nos pétitions</h2>
+<section class="bg-blue-dark py-12 min-h-screen">
+    <h2 class="text-center text-white text-2xl font-bold py-4">Nos pétitions</h2>
 @foreach($petitions as $petition)
 <div class="flex justify-center my-4">
   <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
@@ -17,9 +16,9 @@
                     <span class="pl-12 pt-1 text-sm">Objectif actuel : {{ $petition->objectif }}</span>
                 </div>
             </div>
-            <div class="pt-4">
-                <a class="hover:bg-cyan-400 hover:text-black text-white bg-blue-perso px-1 py-1 rounded" href="{{ route('petitions.signature', $petition) }}">
-                    Signer
+            <div class="pt-4 text-center">
+                <a class="mt-2 hover:bg-cyan-400 hover:text-black text-white bg-blue-perso px-2 py-3 rounded-xl" href="{{ route('petitions.signature', $petition) }}">
+                    Voir la pétition
                 </a>
             </div>
     </div>

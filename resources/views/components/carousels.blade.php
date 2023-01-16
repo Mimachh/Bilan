@@ -1,6 +1,6 @@
 <section class="min-h-screen md:relative bg-white">
-<div class="grid text-black md:grid-cols-3 gap-4">
-  <div class="md:col-span-2 space-y-8 px-4 md:pr-8 py-4">
+<div class="">
+  <div class="space-y-8 px-4 md:pr-8 py-4">
     <div class="space-y-2">
         <h1 class="font-bold text-md">Vos témoignages : </h1>
         <p class="text-sm lead-tight">
@@ -20,7 +20,7 @@
             <div class="carousel-inner relative w-full overflow-hidden">
                 @foreach($carousels as $carousel)
                 <div class="{{ $carousel->id === 1 ? 'active' : ''}} carousel-item float-left w-full">
-                    <div class=" rounded-xl text-center text-white bg-black-perso h-96 grid content-center">
+                    <div class=" rounded-xl text-center text-white bg-blue-dark h-96 grid content-center">
                         <div class="rounded py-12 md:py-24 mx-24">
                             <blockquote class="italic px-2 py-2">{{$carousel->testimonial->content}}
                             </blockquote>
@@ -54,12 +54,7 @@
         </div>
     </div>
   </div>
-  <div class="bg-blue-perso mt-2 rounded-lg ">
-    <div class="pb-12 max-w-[700px] mx-auto px-3 lg:px-6">
-       pub
-    </div>
-  </div>
 </div>
-<h2 class="text-center">Vous aussi laissez votre témoignage <a class="text-blue-perso" href="">en cliquant ici</a> </h2>
+<h2 class="text-center">Vous aussi laissez votre témoignage <a class="text-blue-perso" href="{{ route('testimonials.create') }}">en cliquant ici</a> </h2>
 
 </section>
