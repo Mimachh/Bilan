@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Contact;
 use App\Models\Subject;
+use App\Notifications\NewContactMessage;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notifiable;
 
 class ContactController extends Controller
 {
+    use Notifiable;
     /**
      * Display a listing of the resource.
      *
@@ -59,9 +63,11 @@ class ContactController extends Controller
             'confirm_rule.boolean' => 'Vous devez cocher les conditions d\'utilisation',
         ]);
 
-        $create = Contact::create($data);
-       
+        $contact = Contact::create($data);
+        $contact->notify(new NewContactMessage($contact));
         return redirect()->route('contact.confirmation');
+
+        
     }
 
     /**

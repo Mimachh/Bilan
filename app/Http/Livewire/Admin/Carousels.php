@@ -5,11 +5,15 @@ namespace App\Http\Livewire\Admin;
 use Livewire\Component;
 use App\Models\Carousel;
 use App\Models\Testimonial;
+use App\Notifications\TestimonialOnline;
+use Illuminate\Notifications\Notifiable;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Validator;
 
 class Carousels extends Component
 {
+    use Notifiable;
+    
     public $testimonials;
     public $carousels;
     public $statuts;
@@ -82,8 +86,11 @@ class Carousels extends Component
             $this->updateMode = false;
             $this->reset('state');
             $this->carousels = Carousel::all();
-        }
 
+            $testimonial = Testimonial::find($carousel->testimonial->id);
+            $testimonial->notify(new TestimonialOnline($testimonial));
+        }
+        
     }
 
 

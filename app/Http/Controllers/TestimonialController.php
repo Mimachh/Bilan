@@ -6,6 +6,8 @@ use App\Models\Carousel;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use App\Models\NewsletterUser;
+use App\Notifications\TestimonialSent;
+use Illuminate\Notifications\Notifiable;
 
 class TestimonialController extends Controller
 {
@@ -14,6 +16,7 @@ class TestimonialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    use Notifiable;
     public function index()
     {
         return view('testimonials.index');
@@ -68,6 +71,7 @@ class TestimonialController extends Controller
         $create = Testimonial::create($data);
                 NewsletterUser::create($data2);
        
+        $create->notify(new TestimonialSent($create));
         return redirect()->route('testimonials.confirmation');
     }
 

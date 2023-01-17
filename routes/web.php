@@ -1,12 +1,13 @@
 <?php
 
+
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PetitionController;
 use App\Http\Controllers\TestimonialController;
-use App\Models\Testimonial;
 
 /*
 |--------------------------------------------------------------------------
