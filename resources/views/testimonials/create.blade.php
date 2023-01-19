@@ -5,9 +5,10 @@
 <div class="grid text-black md:grid-cols-3 gap-4">
   <div class="md:col-span-2 space-y-8 px-4 md:pr-8 py-4">
     <div class="space-y-2">
-        <h1 class="font-bold text-md">Titre</h1>
-        <p class="text-sm lead-tight">
-            Quelques mots d'explication
+        <h1 class="font-bold text-center text-3xl pb-4 text-gray-800">Vos témoignages</h1>
+        <p class="text-md lead-tight">
+            Dans cette section c'est vous qui avez la parole. Vous pouvez témoigner de votre situation, de vos difficultés, ou de tout ce que vous auriez envie de partager. <br>
+            Chaque semaine nous sélectionnerons cinq témoignages qui seront ensuite affichés dans l'encadré ci-dessous.
         </p>
     </div>
     <div class="space-y-2">
@@ -25,14 +26,16 @@
                 <div class="{{ $carousel->id === 1 ? 'active' : ''}} carousel-item float-left w-full">
                     <div class=" rounded-xl text-center text-white bg-black-perso h-96 grid content-center">
                         <div class="rounded py-12 md:py-24 mx-24">
-                            <blockquote class="italic px-2 py-2">{{$carousel->testimonial->content}}
+                            <blockquote class="text-md italic px-2 py-2">{{$carousel->testimonial->content}}
                             </blockquote>
-                            <small class="italic">Posté 
-                                @if(isset($carousel->testimonial->name) && ($carousel->testimonial->last_name))
-                                 par : {{ $carousel->testimonial->name}} {{ $carousel->testimonial->last_name}}
-                                @endif
-                                le : {{ $carousel->testimonial->created_at() }}</small>
+                           
                         </div>
+                        <small class="italic">Posté 
+                            @if(isset($carousel->testimonial->name) && ($carousel->testimonial->last_name))
+                            par : {{ $carousel->testimonial->name}} {{ $carousel->testimonial->last_name}}
+                            @endif
+                            le : {{ $carousel->testimonial->created_at() }}
+                        </small>
                     </div>
                 </div>
                 @endforeach
@@ -62,11 +65,11 @@
         Pub 
     </div>
   </div>
-  <div class="bg-blue-perso mt-2 rounded-lg ">
+  <div class="bg-blue-perso mt-2 rounded-lg">
     <div class="pb-12 max-w-[700px] mx-auto px-3 lg:px-6">
         <h2 class="text-2xl text-white font-bold text-center mt-4 mb-2">Envoyer un témoignage</h2>
         <small class="text-white">Les champs marqué de <span class="text-red-600 text-lg">*</span> sont obligatoires</small>
-        <form method='POST' action="{{ route('testimonials.store') }}">
+        <form  method='POST' action="{{ route('testimonials.store') }}">
             @csrf
             <div class="form-group mb-6">
                 <input name="name" type="text" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="name"
@@ -106,7 +109,7 @@
                 @error('newsletter') <small class="text-red-600 italic"> {{ $errors->first('newsletter') }}</small>@enderror
             </div>
             
-            <button type="submit" class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium
+            <button type="submit" class="animate-pulse w-full px-6 py-2.5 bg-blue-600 text-white font-medium
             text-md font-bold uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg
             focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg 
             transition duration-150 ease-in-out">

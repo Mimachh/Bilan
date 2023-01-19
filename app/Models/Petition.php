@@ -21,4 +21,10 @@ class Petition extends Model
     {
         return $this->hasMany('App\Models\Signature');
     }
+
+
+    public function percent(){
+        return round($this->signatures->count() * 100 / $this->objectif, 1);
+    }
+
 }

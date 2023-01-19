@@ -142,7 +142,9 @@
   background-color: #020c3b;
 }
 
-
+.selected {
+  color:red;
+}
 
 /* Confirmation message send page */
 
@@ -322,3 +324,4 @@
       top: 45px
     }
   }
+
