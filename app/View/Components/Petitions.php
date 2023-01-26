@@ -26,8 +26,11 @@ class Petitions extends Component
     public function render()
     {
         $petition = Petition::where('statut', 1)->latest()->first();
+        $percent_objectif = 0;
+        $percent_objectif = ($petition->signatures->count() * 100) / $petition->objectif;
         return view('components.petitions', [
             'petition' => $petition,
+            'percent_objectif' => $percent_objectif,
         ]);
     }
 }
