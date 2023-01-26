@@ -2,6 +2,7 @@
 
 
 
+use App\Http\Controllers\Footer;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ContactController;
@@ -57,8 +58,11 @@ Route::resource('contact', ContactController::class)->except('store');
 Route::post('contact/store', [ContactController::class, 'store'])->name('contact.store');
 Route::view('confirmation', 'contact.confirmation')->name('contact.confirmation');
 
-/* Statistiques routes */
+/* Newsletter Form*/
+Route::get('/newsletters/confirmation', function() { return view('newsletters.confirmation'); })->name('newsletters.confirmation');
+Route::post('newsletters/subscribe', [Footer::class, 'store'])->name('newsletters.subscribe');
 
+/* Statistiques routes */
 Route::prefix('statistiques')->group(function () {
     Route::get('/immigration', function () { return view('stats.migration'); })->name('stats.migration');
     Route::get('/economie', function () { return view('stats.economie'); })->name('stats.economie');

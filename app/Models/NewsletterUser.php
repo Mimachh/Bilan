@@ -12,5 +12,6 @@ class NewsletterUser extends Model
     protected $fillable = [
         'email',
         'statut',
+        'confirm_rule',
     ];
 }

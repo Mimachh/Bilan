@@ -50,6 +50,15 @@
             </div>    
             <div class="border-b border-gray-200 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/60 shadow-cyan-500/50">
                 <table class="divide-y divide-gray-300">
+                    <div>
+                        Montrer
+                        <select id="per_page" wire:model.lazy="perPage">
+                            @for($i = 1; $i <= 25; $i += 5)
+                            <option value="{{$i}}">{{ $i }}</option>
+                            @endfor
+                        </select>
+                        <label for="per_page">par page</label>
+                    </div>
                     <thead class="bg-gray-200">
                         <tr class="px-6 py-2 text-xs text-gray-500 divide-x divide-gray-300">
                             <th class="px-4 py-4" scope="col">#</th>

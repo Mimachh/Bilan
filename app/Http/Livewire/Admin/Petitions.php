@@ -22,9 +22,16 @@ class Petitions extends Component
     use WithFileUploads;
     use WithPagination;
 
+  
     public function mount()
     {
         $this->petitions = Petition::all();
+    }
+
+
+    public function updatedMount($petitions, $perPage) 
+    {
+        $this->petitions = Petition::where('title', 'like', '%'. $this->search .'%')->paginate($this->perPage);
     }
 
     private function resetInputFields(){
