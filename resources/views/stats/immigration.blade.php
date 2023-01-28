@@ -15,7 +15,26 @@
                     <span id="illegalGeneralMigrantsCounter" title="Immigration illégale en France"></span>
                 </h3>
                 <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration légale en France">Immigration légale : 
-                    <span  id="legalGeneralMigrantsCounter" title="Immigration légale en France"></span>
+                    <span  id="legalImmigrationCounter" title="Immigration légale en France"></span>
+                </h3>
+<!-- Zemmour chiffres -->
+                <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration économique en France">Immigration économique : 
+                    <span  id="economicGeneralImmigrationCounter" title="Immigration économique en France"></span>
+                </h3>
+                <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration familiale en France">Immigration familiale : 
+                    <span  id="familialGeneralImmigrationCounter" title="Immigration familiale en France"></span>
+                </h3>
+                <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration étudiante en France">Immigration étudiante : 
+                    <span  id="studientGeneralImmigrationCounter" title="Immigration étudiante en France"></span>
+                </h3>
+                <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration humanitaire en France">Immigration humanitaire : 
+                    <span  id="humanitaireGeneralImmigrationCounter" title="Immigration humanitaire en France"></span>
+                </h3>
+                <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration diverse en France">Immigration diverse : 
+                    <span  id="diversGeneralImmigrationCounter" title="Immigration diverse en France"></span>
+                </h3>
+                <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration Britannique en France">Immigration Britannique : 
+                    <span  id="britishGeneralImmigrationCounter" title="Immigration Britannique en France"></span>
                 </h3>
             </div>
 

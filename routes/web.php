@@ -64,7 +64,7 @@ Route::post('newsletters/subscribe', [Footer::class, 'store'])->name('newsletter
 
 /* Statistiques routes */
 Route::prefix('statistiques')->group(function () {
-    Route::get('/immigration', function () { return view('stats.migration'); })->name('stats.migration');
+    Route::get('/immigration', function () { return view('stats.immigration'); })->name('stats.immigration');
     Route::get('/economie', function () { return view('stats.economie'); })->name('stats.economie');
     Route::get('/violences', function () { return view('stats.violences'); })->name('stats.violences');
 });
@@ -72,7 +72,6 @@ Route::prefix('statistiques')->group(function () {
 
 /* Golden book */
 Route::resource('/temoignages', TestimonialController::class);
-
 Route::prefix('/temoignages')->group(function () {
     Route::view('confirmation', 'testimonials.confirmation')->name('testimonials.confirmation');
     Route::get('/', [TestimonialController::class, 'create'])->name('testimonials.create');

@@ -37,7 +37,15 @@
                       pl-4 pr-24 block w-full whitespace-nowrap
                       bg-transparent
                       text-white hover:text-purple-400
-                    " href="#">Economie</a>
+                    " href="{{ route('stats.economie') }}">Economie</a>
+                  </li>
+                  <li>
+                    <a class=" text-left
+                      dropdown-item py-2
+                      pl-4 pr-24 block w-full whitespace-nowrap
+                      bg-transparent
+                      text-white hover:text-purple-400
+                    " href="{{ route('stats.immigration') }}">Immigration</a>
                   </li>
                   <li>
                     <a class=" text-left
@@ -53,7 +61,7 @@
                       pl-4 pr-24 block w-full whitespace-nowrap
                       bg-transparent
                       text-white hover:text-purple-400
-                    " href="#">Insécurité</a>
+                    " href="{{ route('stats.violences') }}">Insécurité</a>
                   </li>
                   <li>
                     <a class=" text-left
