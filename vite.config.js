@@ -14,6 +14,7 @@ export default defineConfig({
                 'resources/js/economie.js',
                 'resources/js/violence.js',
                 'resources/js/testimonial.js',
+                'resources/js/ruralite.js',
             ],
             refresh: true,
         }),

@@ -36,9 +36,22 @@
                 <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration Britannique en France">Immigration Britannique : 
                     <span  id="britishGeneralImmigrationCounter" title="Immigration Britannique en France"></span>
                 </h3>
-                <h3 class="text-gray-400 text-sm  font-semibold" title="Montant de l'AME ">Montant de l'AME : 
-                    <span  id="ameTotal2023CounterCounter" title="Montant de l'AME "></span>
-                </h3>
+
+                <!-- AME + InfoBulle -->
+                <div class="flex space-x-1">
+                    <h3 class="text-gray-400 text-sm  font-semibold" title="Montant de l'AME ">Montant de l'AME : 
+                        <span  id="ameTotal2023Counter" title="Montant de l'AME "></span>
+                    </h3>
+                    <div class="conteneur">
+                        <div class="objet_vise">
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" id="magicoon-Filled" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:#41416e;}</style> </defs> <title>question-circle</title> <g id="question-circle-Filled"> <path id="question-circle-Filled-2" data-name="question-circle-Filled" class="cls-1" d="M12,2A10,10,0,1,0,22,12,10.016,10.016,0,0,0,12,2Zm0,16a1,1,0,1,1,1-1A1,1,0,0,1,12,18Zm2.04-4.68c-.92.61-1.07.94-1.09,1A1,1,0,0,1,12,15a1.185,1.185,0,0,1-.32-.05,1.015,1.015,0,0,1-.63-1.27,4.585,4.585,0,0,1,1.88-2.03,1.87,1.87,0,0,0,1.04-2.02,2.029,2.029,0,0,0-1.6-1.6A2,2,0,0,0,10,10a1,1,0,0,1-2,0A3.982,3.982,0,0,1,9.43,6.94a3.995,3.995,0,0,1,6.51,2.34A3.906,3.906,0,0,1,14.04,13.32Z"></path> </g> </g></svg>
+                        </div>
+                        <div class="infobulle bg-blue-500 rounded-lg px-2 py-2">
+                            <small class="">Source : <br> 
+                            <a target="_blank" href="http://www.senat.fr/rap/l22-115-328/l22-115-3285.html">http://www.senat.fr/rap/l22-115-328/l22-115-3285.html</a></small>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             
@@ -78,5 +91,5 @@
     </div>
     <hr>
 </section>
-@vite('resources/js/migration.js')
+@vite(['resources/js/migration.js', 'resources/js/ruralite.js'])
 @endsection
