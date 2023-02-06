@@ -181,16 +181,16 @@
         <!-- Links -->
         <div class=" col-span-3 md:col-span-1 row-start-1 mr-4 md:row-start-1 text-center text-white font-medium">
             <div class="">
-                <a href="">Page principale</a> 
+                <a href="{{ route('/') }}">Page principale</a> 
             </div>
             <div class="">
                 <a href="">A propos de nous</a>
             </div>
             <div class="">
-                <a href="">FAQ</a>
+                <a href="{{ route('faq') }}">FAQ</a>
             </div>
             <div class="">
-                <a href="">Contactez-nous</a>
+                <a href="{{ route('contact.create') }}">Contactez-nous</a>
             </div>
             <div class="">
                 <a href="">Politique du site</a>
@@ -199,7 +199,7 @@
                 <a href="">Mentions légales</a>
             </div>
             <div class="">
-                <a href="">Nos pétitions</a>
+                <a href="{{ route('petitions.index') }}">Nos pétitions</a>
             </div>
         </div>
 

@@ -36,6 +36,9 @@
                 <h3 class="text-gray-400 text-sm  font-semibold" title="Immigration Britannique en France">Immigration Britannique : 
                     <span  id="britishGeneralImmigrationCounter" title="Immigration Britannique en France"></span>
                 </h3>
+                <h3 class="text-gray-400 text-sm  font-semibold" title="Montant de l'AME ">Montant de l'AME : 
+                    <span  id="ameTotal2023CounterCounter" title="Montant de l'AME "></span>
+                </h3>
             </div>
 
             

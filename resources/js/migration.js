@@ -46,7 +46,6 @@ setInterval(function() {
 var generalMigrantsCounter = legalImmigrationCounter + illegalGeneralMigrantsCounter;
 var generalMigrantsCounterNode = document.getElementById('generalMigrantsCounter');
 
-
 // Immigration Zemmour Counter
 
     // Economique Immigration 
@@ -133,6 +132,19 @@ var generalMigrantsCounterNode = document.getElementById('generalMigrantsCounter
     // console.log(britishImmigrationByDay2022 / seconds);
 
 
+    // AME
+    var ameTotal2023 = 1212300000 ;
+    var ameTotal2023ByDay = ameTotal2023 / dayYear2022;
+    // console.log(britishImmigrationByDay2022);
+    var ameTotal2023Counter = (numberDayFromJanuaryFirst * ameTotal2023ByDay);
+    //console.log(ameTotal2023Counter);
+    var ameTotal2023CounterNode = document.getElementById('ameTotal2023CounterCounter');
+    ameTotal2023CounterNode.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(ameTotal2023Counter);
+    setInterval(function() {
+        ameTotal2023Counter += (ameTotal2023ByDay / (seconds * 20));
+        ameTotal2023CounterNode.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(ameTotal2023Counter);
+    }, 1000 / 20);
+    // console.log(britishImmigrationByDay2022 / seconds);
 
 // Share the main Page
 
