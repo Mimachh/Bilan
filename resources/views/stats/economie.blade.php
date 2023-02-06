@@ -15,6 +15,11 @@
                 <h3 class="text-black font-bold" id="deficitTotalCounter" title="deficits cumulés"></h3>
             </div>
 
+            <div class="flex text-blue-perso space-x-2">
+                <h3 class="font-semibold" title="Fraude à la carte vitale">Fraude à la carte vitale</h3>
+                <h3 class="text-black font-bold" id="fraudeVitaleTotal2023Counter" title="Fraude à la carte vitale"></h3>
+            </div>
+
         </div>
         <div class="bg-red-600">PUB</div>
     </div>

@@ -332,10 +332,9 @@
     overflow: visible;
     cursor:help;
   }
-  .conteneur .objet_vise:hover {
-    /* ici, on peut modifier l'objet visé au hover si on le veut. Ici, je change sa couleur! */
+  /* .conteneur .objet_vise:hover {
     background-color: red;
-  }
+  } */
   
   .conteneur .infobulle {
     position: absolute;
