@@ -1,6 +1,20 @@
 @extends('layouts.master')
 @section('content')
 <section class="min-h-screen">
+    <header class="bg-white shadow bg-black-perso">
+        <div class="text-center pt-6">
+        <h1 class="font-bold text-center text-3xl text-gradient">ECONOMIE</h1> 
+        </div>
+        <div class="text-center text-sm pt-3 pb-4 space-x-4">
+            <a href="" class="text-gradient">Ruralité</a>
+            <a href="" class="text-gradient">Immigration</a>
+            <a href="" class="text-gradient">Ecologie</a>
+            <a href="" class="text-gradient">Ruralité</a>
+            <a href="" class="text-gradient">Immigration</a>
+            <a href="" class="text-gradient">Ecologie</a>
+            <a href="" class="text-gradient">Ecologie</a>
+        </div>
+    </header>
     <!-- Economy Part -->
     <div class="grid grid-cols-3 gap-4 pt-12 ml-8">
         <div class="col-span-2">

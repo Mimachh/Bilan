@@ -14,7 +14,7 @@
                 <img class="shadow hover:shadow-xl" src="{{ Vite::asset('public/storage/société.png') }}" alt="Logo de l'économie">
             </div>
         </a>
-        <a class="hover:opacity-70" href="{{ route('stats.economie') }}">
+        <a class="hover:opacity-70" href="{{ route('stats.ruralite') }}">
             <div class="hover:opacity-70 mb-4">
                 <img class="shadow hover:shadow-xl" src="{{ asset('storage/ruralité.png') }}" alt="Logo de l'économie">
             </div>

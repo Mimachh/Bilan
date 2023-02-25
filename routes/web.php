@@ -67,6 +67,7 @@ Route::prefix('statistiques')->group(function () {
     Route::get('/immigration', function () { return view('stats.immigration'); })->name('stats.immigration');
     Route::get('/economie', function () { return view('stats.economie'); })->name('stats.economie');
     Route::get('/violences', function () { return view('stats.violences'); })->name('stats.violences');
+    Route::get('/ruralite', function () { return view('stats.ruralite'); })->name('stats.ruralite');
 });
 
 

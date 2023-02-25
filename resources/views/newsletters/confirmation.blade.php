@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-<div class="my-48">
+<div class="my-48 min-h-screen">
     <div class="swal-icon swal-icon--success">
         <span class="bg-green-400 swal-icon--success__line swal-icon--success__line--long"></span>
         <span class="bg-green-400 swal-icon--success__line swal-icon--success__line--tip"></span>

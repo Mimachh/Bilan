@@ -1,5 +1,5 @@
 <nav class="flex flex-wrap items-center justify-between w-full
-          py-4 px-4 text-lg text-white bg-nav font-bold">
+          py-6 px-4 text-lg text-white bg-nav font-bold">
        <div class="flex">
           <a class="text-3xl font-black ml-4 tracking-wide" href="{{ route('/') }}">
             BRAVO MACRON.
@@ -18,6 +18,7 @@
               md:flex
               md:justify-between 
               md:pt-0"
+              
           > 
           <li>
               <div class="dropdown relative">
@@ -69,7 +70,7 @@
                       pl-4 pr-24 block w-full whitespace-nowrap
                       bg-transparent
                       text-white hover:text-purple-400
-                    " href="#">Ruralité</a>
+                    " href="{{ route('stats.ruralite') }}">Ruralité</a>
                   </li>
                   <li>
                     <a class=" text-left

@@ -106,8 +106,11 @@
             </form>
         </div>
         <!-- Social Media -->
-        <div class="col-span-3 md:col-span-1 row-start-2 md:row-start-1 col-start-2 grid place-content-center">
-            <div class="flex justify-center mb-6">
+        <div class="col-span-3 space-y-10 md:col-span-1 row-start-2 md:row-start-1 col-start-2 grid place-content-center">
+            <div class="text-center mt-3">
+                <blockquote class="text-gray-100 text-6xl font-medium font-jafardose">Monsieur le Président, <br> Merci. </blockquote>
+            </div>
+            <div class="flex justify-center">
                 <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                     <svg aria-hidden="true"
                     focusable="false" data-prefix="fab"
@@ -203,7 +206,7 @@
             </div>
         </div>
 
-        <div class="col-start-2 col-span-3 md:col-span-3 text-center p-4">
+        <div class="col-start-2 col-span-3 md:col-span-3 text-center border-t p-4">
             © 2021 Copyright:
             <a class="text-white" href="https://tailwind-elements.com/">Tailwind Elements</a>
         </div>

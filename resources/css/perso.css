@@ -1,14 +1,15 @@
 /* MAIN */
 
 @import url('https://fonts.cdnfonts.com/css/made-tommy-outline');
-
+@import url('https://fonts.googleapis.com/css2?family=Miss+Fajardose&display=swap');
 .bg-nav {
   background: rgb(80,0,199);
   background: linear-gradient(15deg, rgba(80,0,199,1) 20%, rgba(0,74,212,1) 78%);
 }
 .bg-black-perso
 {
-    background-color: #171a1d;
+  background: rgb(26,26,26);
+  background: linear-gradient(360deg, rgba(26,26,26,1) 0%, rgba(41,41,41,1) 65%);
 }
 
 .bg-footer {
@@ -38,6 +39,13 @@
 .text-blue-perso
 {
     color: #004ad4;
+}
+
+.text-gradient {
+  background: linear-gradient(360deg, rgba(0,120,255,0.38699229691876746) 0%, rgba(255,255,255,1) 42%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* PROGRESS BAR */

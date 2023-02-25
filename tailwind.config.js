@@ -19,6 +19,7 @@ module.exports = {
                 tommyoutline: ['MADE TOMMY Outline', 'sans-serif'],
                 tommy: ['MADE TOMMY', 'sans-serif'],
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                jafardose: ['Miss Fajardose', 'cursive']
             },
         },
     },
