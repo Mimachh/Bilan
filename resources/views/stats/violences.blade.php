@@ -1,5 +1,13 @@
 @extends('layouts.master')
 @section('content')
+
+<header class="bg-white shadow bg-black-perso">
+    <div class="text-center pt-6">
+        <h1 class="font-bold text-center text-3xl text-gradient">IMMIGRATION</h1> 
+    </div>
+    <x-breadcrumbs/>
+</header>
+
 <section class="min-h-screen">
 
 <!-- Violence Part -->

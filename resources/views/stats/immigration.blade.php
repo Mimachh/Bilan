@@ -1,6 +1,13 @@
 @extends('layouts.master')
 @section('content')
 
+<header class="bg-white shadow bg-black-perso">
+    <div class="text-center pt-6">
+        <h1 class="font-bold text-center text-3xl text-gradient">IMMIGRATION</h1> 
+    </div>
+    <x-breadcrumbs/>
+</header>
+
 <section id="stats" class="pt-12 min-h-screen bg-black-perso">
     <div class="pb-12 px-12 grid grid-cols-3 gap-4">
         <div class="shadow shadow-white space-y-4 col-span-3 md:col-span-2 text-white px-4 py-4 rounded">
@@ -39,9 +46,11 @@
 
                 <!-- AME + InfoBulle -->
                 <div class="flex space-x-1">
-                    <h3 class="text-gray-400 text-sm  font-semibold" title="Montant de l'AME ">Montant de l'AME : 
-                        <span  id="ameTotal2023Counter" title="Montant de l'AME "></span>
-                    </h3>
+                    <div class="flex space-x-1 box-content box-border w-64 h-2">
+                        <h3 class="text-gray-400 text-sm font-semibold " title="Montant de l'AME ">Montant de l'AME : 
+                        <span id="ameTotal2023Counter" title="Montant de l'AME "></span>
+                        </h3>
+                    </div>
                     <div class="conteneur">
                         <div class="objet_vise">
                             <svg class="h-4 w-4" viewBox="0 0 24 24" id="magicoon-Filled" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:#41416e;}</style> </defs> <title>question-circle</title> <g id="question-circle-Filled"> <path id="question-circle-Filled-2" data-name="question-circle-Filled" class="cls-1" d="M12,2A10,10,0,1,0,22,12,10.016,10.016,0,0,0,12,2Zm0,16a1,1,0,1,1,1-1A1,1,0,0,1,12,18Zm2.04-4.68c-.92.61-1.07.94-1.09,1A1,1,0,0,1,12,15a1.185,1.185,0,0,1-.32-.05,1.015,1.015,0,0,1-.63-1.27,4.585,4.585,0,0,1,1.88-2.03,1.87,1.87,0,0,0,1.04-2.02,2.029,2.029,0,0,0-1.6-1.6A2,2,0,0,0,10,10a1,1,0,0,1-2,0A3.982,3.982,0,0,1,9.43,6.94a3.995,3.995,0,0,1,6.51,2.34A3.906,3.906,0,0,1,14.04,13.32Z"></path> </g> </g></svg>

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\View\Components\BreadCrumbPerso;
 use App\View\Components\Carousel;
 use App\View\Components\Categories;
 use App\View\Components\Dons;
@@ -37,6 +38,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('carousel', Carousel::class);
         Blade::component('categories', Categories::class);
         Blade::component('welcome-page', WelcomePage::class);
+        Blade::component('breadcrumbs', BreadCrumbPerso::class);
 
     }
 }
