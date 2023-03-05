@@ -12,6 +12,11 @@
   background: linear-gradient(360deg, rgba(26,26,26,1) 0%, rgba(41,41,41,1) 65%);
 }
 
+.bg-black-29
+{
+  background-color: rgb(29,29,29);
+}
+
 .bg-footer {
   background-color: #003366;
 }
@@ -31,6 +36,11 @@
     color: #cc0099;
 }
 
+.bg-violet-degrade {
+  background: rgb(147,37,153);
+  background: linear-gradient(270deg, rgba(147,37,153,1) 16%, rgba(112,26,117,1) 41%);
+}
+
 .bg-blue-perso
 {
     background-color: #004ad4;
@@ -41,11 +51,27 @@
     color: #004ad4;
 }
 
+.chiffre_election {
+  font-size: 20vh;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 720px) {
+  .chiffre_election {
+    font-size: 15vh;
+    font-weight: 500;
+  }
+}
+
 .text-gradient {
   background: linear-gradient(360deg, rgba(0,120,255,0.38699229691876746) 0%, rgba(255,255,255,1) 42%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.screen-welcome-page-stat-size {
+  height: 60vh;
 }
 
 /* PROGRESS BAR */
@@ -142,7 +168,7 @@
 
 /* Welcome page */
 .bg-image {
-  background-image: url("/public/storage/macron.jpg");
+  background-image: url("/public/storage/macron1.jpg");
   background-repeat: no-repeat;
 }
 
@@ -336,7 +362,8 @@
 /* Info-bulles */
   .conteneur {
     position: relative;
-
+    top: -5px;
+    left: -10px;
     overflow: visible;
     cursor:help;
   }

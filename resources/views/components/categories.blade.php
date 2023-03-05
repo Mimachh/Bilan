@@ -1,4 +1,4 @@
-<section id="categories" class="min-h-screen pb-8">
+<section id="categories" class="min-h-screen pb-4">
     <h2 class="mt-4 py-4 text-center text-white bg-nav text-xl font-bold">Quelles statistiques souhaites-tu <br> consulter ?</h2>
     <div class="mt-2 md:grid md:grid-cols-2 lg:grid-cols-4 mx-12 gap-4 bg-red-600">
         PUB
@@ -33,6 +33,11 @@
             <div class="hover:opacity-70 mb-4">
                 <img class="shadow hover:shadow-xl" src="{{ asset('storage/insécurité.png') }}" alt="Logo de l'économie">
             </div>
-        </a>
+        </a> 
+    </div>
+    <div class="bg-violet-degrade py-30 text-center">
+        <span class="pt-4 chiffre_election text-white" id="destitution"></span>
+        <p class="text-lg text-white px-4 pb-4">Jours restants avant la prochaine élection.
+        </p>
     </div>
 </section>
