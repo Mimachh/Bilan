@@ -1,7 +1,12 @@
-/* MAIN */
+/* GLOBAL */
 
+/* Import */
 @import url('https://fonts.cdnfonts.com/css/made-tommy-outline');
 @import url('https://fonts.googleapis.com/css2?family=Miss+Fajardose&display=swap');
+
+/* -------------------------------------------- */
+
+/* Background-Color */
 .bg-nav {
   background: rgb(80,0,199);
   background: linear-gradient(15deg, rgba(80,0,199,1) 20%, rgba(0,74,212,1) 78%);
@@ -21,19 +26,9 @@
   background-color: #003366;
 }
 
-.text-black-perso
-{
-    color: #171a1d;
-}
-
 .bg-violet-rose-perso
 {
-    background-color: #cc0099;
-}
-
-.text-violet-rose-perso
-{
-    color: #cc0099;
+  background-color: #cc0099;
 }
 
 .bg-violet-degrade {
@@ -43,13 +38,42 @@
 
 .bg-blue-perso
 {
-    background-color: #004ad4;
+  background-color: #004ad4;
+}
+
+.bg-blue-dark {
+  background-color: #020c3b;
+}
+
+
+/* -------------------------------------------- */
+
+/* Text-Color */
+.text-black-perso
+{
+    color: #171a1d;
+}
+
+.text-violet-rose-perso
+{
+    color: #cc0099;
 }
 
 .text-blue-perso
 {
     color: #004ad4;
 }
+
+.text-gradient {
+  background: linear-gradient(360deg, rgba(0,120,255,0.38699229691876746) 0%, rgba(255,255,255,1) 42%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------------------------- */
+
+/* MAIN PAGE DEPART MACRON */
 
 .chiffre_election {
   font-size: 20vh;
@@ -63,18 +87,15 @@
   }
 }
 
-.text-gradient {
-  background: linear-gradient(360deg, rgba(0,120,255,0.38699229691876746) 0%, rgba(255,255,255,1) 42%);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .screen-welcome-page-stat-size {
   height: 60vh;
+  min-height: 400px;
 }
 
+/* -------------------------------------------- */
+
 /* PROGRESS BAR */
+
 .progressMigrantsTotal {
     background-color: cyan;
     border-radius: 20px;
@@ -166,21 +187,64 @@
   transition: 1s ease 0.3s;
 }
 
-/* Welcome page */
+/* -------------------------------------------- */
+
+/* MAIN PAGE*/
+
+/* Macron depart part */
+
+#countDiv {
+  color:white;
+  display:inline-block;
+  font-size:30px;
+}
+#countDiv > div {
+    padding:10px;
+    background-color:#38556A;
+    border-radius: 30% 3%;
+    display:inline-block;
+}
+#countDiv div > span {
+    padding:15px;
+    background-color:#4C6983;
+    border-radius: 30% 3%;
+    display: inline-block;
+    transition:all 2s;
+}
+#countDiv div > span:hover {
+    transform:scale(3);
+}
+
+.smallText{
+    font-weight:900;
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+/* Petition component */
+
+.transition_scale {
+  transition:all 2s;
+}
+.transition_scale:hover {
+  transform:scale(1.1);
+}
+
+/* M-P Background-image */
+
 .bg-image {
   background-image: url("/public/storage/macron1.jpg");
   background-repeat: no-repeat;
 }
 
-.bg-blue-dark {
-  background-color: #020c3b;
-}
 
-.selected {
+/* .selected {
   color:red;
-}
+} */
 
-/* Confirmation message send page */
+/* -------------------------------------------- */
+
+/* CONFIRMATION SEND PAGE */
 
 .swal-icon--success {
     border-color: #a5dc86
@@ -359,6 +423,8 @@
     }
   }
 
+/* -------------------------------------------- */
+
 /* Info-bulles */
   .conteneur {
     position: relative;
@@ -386,3 +452,7 @@
     z-index: 999;
     transition: all ease 1;
   }
+
+/* -------------------------------------------- */
+
+  

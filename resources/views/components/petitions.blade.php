@@ -2,7 +2,7 @@
     <h2 class="text-center text-white text-2xl font-bold py-4">Nos pétitions</h2>
     <div class="mx-12 min-h-screen mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3 sm:grid-cols-2">
         <div class="w-full md:px-4 max-h-62 lg:px-0 col-start-2">
-            <div class="text-center p-3 bg-white rounded shadow-md hover:shadow-2xl">
+            <div class="transition_scale text-center p-3 bg-white rounded shadow-md hover:shadow-2xl">
                 <div>
                     <div class="rounded aspect-w-1 aspect-h-1  overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
                         <img src="{{ asset('storage/petitions/' . $petition->photo) }}" alt="Photo de la pétition" 
