@@ -33,7 +33,7 @@
         <footer>
             @include('includes.footer')
         </footer>
-  
+        @vite('resources/js/global.js')
         @vite('resources/js/app.js')
     </body>
 </html>

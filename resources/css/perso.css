@@ -192,33 +192,54 @@
 /* MAIN PAGE*/
 
 /* Macron depart part */
-
+.days {
+  font-size: 7rem;
+}
+.hours {
+  font-size: 3rem;
+}
+.minutes {
+  font-size: 2.5rem;
+}
+.countDiv {
+  color:white;
+  display:inline-block;
+  font-size:30px;
+  font-weight: 700;
+}
 #countDiv {
   color:white;
   display:inline-block;
   font-size:30px;
+  font-weight: 700;
 }
-#countDiv > div {
+/* #countDiv > div  {
+  padding:10px;
+  background-color:#38556A;
+  border-radius: 30% 3%;
+  display:inline-block;
+} */
+.countDiv > div  {
     padding:10px;
     background-color:#38556A;
     border-radius: 30% 3%;
     display:inline-block;
 }
 #countDiv div > span {
-    padding:15px;
+    /* padding:15px;
     background-color:#4C6983;
-    border-radius: 30% 3%;
+    border-radius: 30% 3%; */
     display: inline-block;
-    transition:all 2s;
+    /* transition:all 2s; */
 }
-#countDiv div > span:hover {
+/* #countDiv div > span:hover {
     transform:scale(3);
-}
+} */
 
 .smallText{
     font-weight:900;
   padding-top: 5px;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 /* Petition component */
