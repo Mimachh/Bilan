@@ -1,9 +1,14 @@
-//Calculate for general counter 
-var now = Date.now();
-var januaryFirst = 1672527600000;
-var dayYear2022 = 365;
-var seconds = 86400;
-var numberDayFromJanuaryFirst = (now - januaryFirst)/86400000;
+import { now } from "./global";
+import { januaryFirst } from "./global";
+import { dayYear2022 } from "./global";
+import { seconds } from "./global";
+import { numberDayFromJanuaryFirst } from "./global";
+import { numberFrench2023 } from "./global";
+import { countByDay } from "./global";
+import { totalCounter2022 } from "./global";
+import { countIncreaseBySecond } from "./global";
+import { countTotal } from "./global";
+import { refreshEveryOneSecond } from "./global";
 
 
 //Suicides Agriculteur

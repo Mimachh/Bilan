@@ -1,18 +1,14 @@
-
- 
-// Counters 
-
-
-
- 
-
-//Calculate for general counter 
-var now = Date.now();
-var januaryFirst = 1672527600000;
-var dayYear = 365;
-var seconds = 86400;
-var numberDayFromJanuaryFirst = (now - januaryFirst)/86400000;
-
+import { now } from "./global";
+import { januaryFirst } from "./global";
+import { dayYear2022 } from "./global";
+import { seconds } from "./global";
+import { numberDayFromJanuaryFirst } from "./global";
+import { numberFrench2023 } from "./global";
+import { countByDay } from "./global";
+import { totalCounter2022 } from "./global";
+import { countIncreaseBySecond } from "./global";
+import { countTotal } from "./global";
+import { refreshEveryOneSecond } from "./global";
 
 // ECONOMY PART        
 // Deficit Cumul
@@ -27,11 +23,11 @@ var oldElection = 1650758400000;
 var nextElection = 1808604000000;
 var numberDayFromOldElection = (now - oldElection)/86400000;
 var diffDays = Math.ceil(Math.abs(now - nextElection)/ (1000 * 60 * 60 * 24));
-console.log(diffDays);
+// console.log(diffDays);
 var diffHours = Math.ceil(Math.abs(now - nextElection)/ (1000 * 60 * 60));
-console.log(diffHours);
+// console.log(diffHours);
 var diffMinutes = Math.ceil(Math.abs(now - nextElection)/ (1000 * 60));
-console.log(diffMinutes);
+// console.log(diffMinutes);
 var diffDaysNode = document.getElementById('destitution');
 diffDaysNode.innerHTML = diffDays;
 var percentNextElection = (numberDayFromOldElection / diffDays) * 100;
@@ -115,5 +111,5 @@ function installCalc(id, endtime) {
 }
 
 var DeadLine = new Date(1808604000000);
-console.log(DeadLine);
+// console.log(DeadLine);
 installCalc("countDiv", DeadLine);

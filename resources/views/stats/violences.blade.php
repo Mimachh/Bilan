@@ -72,8 +72,62 @@
         <h3 class="text-gray-400 font-semibold" title="Usage de stupéfiants">Usage de stupéfiants : 
             <span id="usageStupefiants2022TotalCounter" title="Usage de stupéfiants"></span>
         </h3>
-    </div>
+        
+        <h3 class="text-gray-400 font-semibold" title="Trafic de stupéfiants">Trafic de stupéfiants : 
+            <span id="traficStupefiants2022TotalCounter" title="Trafic de stupéfiants"></span>
+        </h3>
 
+        <h3 class="text-gray-400 font-semibold" title="Escroqueries">Escroqueries : 
+            <span id="escroqueries2022TotalCounter" title="Escroqueries"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Actes terroristes (islamistes) déjoués">Actes terroristes (islamistes) déjoués : 
+            <span id="actesTerroristesIslamistesDejoues2022TotalCounter" title="Actes terroristes (islamistes) déjoués"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Actes terroristes islamistes">Actes terroristes islamistes : 
+            <span id="actesTerroristesIslamistes2022TotalCounter" title="Actes terroristes islamistes"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Actes terroristes d'extrême-droite">Actes terroristes d'extrême-droite : 
+            <span id="actesTerroristesED2022TotalCounter" title="Actes terroristes d'extrême-droite"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Actes antisémites">Actes antisémites : 
+            <span id="actesAntisemites2022TotalCounter" title="Actes antisémites"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Agressions physiques Homophobes">Agressions physiques Homophobes : 
+            <span id="agressionsPhysiquesHomophobes2022TotalCounter" title="Agressions physiques Homophobes"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Actes homophobes répertoriés">Actes homophobes répertoriés : 
+            <span id="actesRepertoriesHomophobes2022TotalCounter" title="Actes homophobes répertoriés"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Nombre de fichés S">Nombre de fichés S : 
+            <span id="nombreFichesSDjihadistes2021TotalCounter" title="Nombre de fichés S"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Nombre d'OQTF prononcées">Nombre d'OQTF prononcées : 
+            <span id="nombreOQTFPrononces2021TotalCounter" title="Nombre d'OQTF prononcées"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Nombre d'OQTF exécutées">Nombre d'OQTF exécutées : 
+            <span id="nombreOQTFExecutes2021TotalCounter" title="Nombre d'OQTF exécutées"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Nombre d'OQTF prononcées depuis 2011">Nombre d'OQTF prononcées depuis 2011 : 
+            <span id="nombreOQTFPrononceDepuis2011TotalCounter" title="Nombre d'OQTF prononcées depuis 2011"></span>
+        </h3>
+        
+        <h3 class="text-gray-400 font-semibold" title="Nombre d'OQTF exécutées depuis 2011">Nombre d'OQTF exécutées depuis 2011 : 
+            <span id="nombreOQTFExecuteesDepuis2011TotalCounter" title="Nombre d'OQTF exécutées depuis 2011"></span>
+        </h3>
+    </div>
+<div id="div_message" class="hidden border bg-green-400">
+<h4 id="message" class="text-red-600"></h4>
+</div>
 
 </section>
 @vite('resources/js/violence.js')
