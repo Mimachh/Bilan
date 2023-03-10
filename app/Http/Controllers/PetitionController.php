@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NewsletterUser;
 use App\Models\Petition;
 use App\Models\Response;
 use App\Models\Signature;
 use Illuminate\Http\Request;
+use App\Models\NewsletterUser;
+use Illuminate\Validation\Rule;
 
 class PetitionController extends Controller
 {
@@ -49,23 +50,46 @@ class PetitionController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
+        request()->validate([
             'name' => 'required|max:60',
             'last_name' => 'required|max:60',
             'petition_id' => 'required|integer',
-            'email' => 'required|max:255|unique:signatures,email',
+            'email' => ['required', 'max:255', 
+                        Rule::unique('signatures')->where(function ($query) use ($request) {
+                            return $query->where('email', $request->email)
+                                         ->where('petition_id', $request->petition_id);
+                        }),
+                    ],
             'confirm_rule' => 'required|boolean',
         ], [
-            'name.required' => 'Votre nom doit être renseigné',
-            'name.max' => 'Votre nom est trop long',
-            'last_name.required' => 'Votre prénom doit être renseigné',
-            'last_name.max' => 'Votre prénom est trop long',
-            'email.max' => 'Votre mail ne doit pas dépasser 255 caractères',
-            'email.unique' => 'Votre mail a déjà été utilisé',
-            'email.required' => 'Vous devez renseigner votre mail',
-            'confirm_rule.required' => 'Vous devez accepter les conditions d\'utilisation',
-            'confirm_rule.boolean' => 'Vous devez cocher les conditions d\'utilisation',
-        ]);
+                'name.required' => 'Votre nom doit être renseigné',
+                'name.max' => 'Votre nom est trop long',
+                'last_name.required' => 'Votre prénom doit être renseigné',
+                'last_name.max' => 'Votre prénom est trop long',
+                'email.max' => 'Votre mail ne doit pas dépasser 255 caractères',
+                'email.unique' => 'Votre mail a déjà été utilisé pour signer cette pétition',
+                'email.required' => 'Vous devez renseigner votre mail',
+                'confirm_rule.required' => 'Vous devez accepter les conditions d\'utilisation',
+                'confirm_rule.boolean' => 'Vous devez cocher les conditions d\'utilisation',
+            ]
+        );
+        // $data = $this->validate($request, [
+        //     'name' => 'required|max:60',
+        //     'last_name' => 'required|max:60',
+        //     'petition_id' => 'required|integer',
+        //     'email' => 'required|max:255|unique:signatures,email',
+        //     'confirm_rule' => 'required|boolean',
+        // ], [
+        //     'name.required' => 'Votre nom doit être renseigné',
+        //     'name.max' => 'Votre nom est trop long',
+        //     'last_name.required' => 'Votre prénom doit être renseigné',
+        //     'last_name.max' => 'Votre prénom est trop long',
+        //     'email.max' => 'Votre mail ne doit pas dépasser 255 caractères',
+        //     'email.unique' => 'Votre mail a déjà été utilisé',
+        //     'email.required' => 'Vous devez renseigner votre mail',
+        //     'confirm_rule.required' => 'Vous devez accepter les conditions d\'utilisation',
+        //     'confirm_rule.boolean' => 'Vous devez cocher les conditions d\'utilisation',
+        // ]);
 
         $data2 = $request->validate([
             'statut' => 'nullable|boolean',
@@ -76,8 +100,14 @@ class PetitionController extends Controller
             'email.required' => 'Vous devez renseigner votre mail',
         ]);
 
-        $create = Signature::create($data);
-                NewsletterUser::create($data2);
+        $create =   Signature::create([
+            'name' => $request->name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'petition_id' => $request->petition_id,
+            'confirm_rule' => $request->confirm_rule
+        ]);
+                    NewsletterUser::create($data2);
        
         return redirect()->route('petitions.confirmation');
 

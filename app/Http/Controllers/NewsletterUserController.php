@@ -2,11 +2,56 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NewsletterUser;
 use Illuminate\Http\Request;
+use App\Models\NewsletterUser;
+use Illuminate\Support\Facades\Http;
 
 class NewsletterUserController extends Controller
 {
+    public function unsubscribe ()
+    {
+        return view('newsletters.unsubscribe');
+
+    }
+    public function confirmUnsubscribe($mail, $newsletter_id)
+    {
+        $email = encrypt($mail);
+        $decryptEmail = decrypt($email);
+        // dd($email, decrypt($email));
+
+
+        $user  = NewsletterUser::where('email', $decryptEmail)->first();
+        if ($user) {
+            // $emailCampaignId         = Request::get('email_campaign_id');
+            $user->update([
+                'statut' => 0,
+            ]);
+            // $update = NewsletterUser::updateOrCreate([
+            //     'statut' => $statut,
+            //     'email' => $decryptEmail,
+            // ]);
+            // $emailCampaignPreference = EmailCampaignPreference::updateOrCreate(
+            //     [
+            //         'user_id'           => $user->id,
+            //         'email_campaign_id' => $emailCampaignId,
+            //     ],
+            //     [
+            //         'opt_out' => true,
+            //         'email'   => $user->email,
+            //     ]
+            // );
+
+            return redirect()->route('/');
+        }
+        else {
+            // echo 'Erreur 404. Les données fournies sont invalides';
+            //  return response()->view('errors.404', [], 404);
+            abort(404, 'Page');
+        }
+            // 'sinon erreur ici'
+    }
+        
+
     /**
      * Display a listing of the resource.
      *

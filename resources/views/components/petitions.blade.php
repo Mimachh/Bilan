@@ -15,7 +15,7 @@
                                 {{ $petition->title }}
                                 </h2>
                                 @if($petition->signatures->count() > 0)
-                                    <p class="text-gray-200">Nombre de signataires : <span>{{ $petition->signatures->count() }}</span> </p>
+                                    <p class="">Nombre de signataires : <span>{{ $petition->signatures->count() }}</span> </p>
                                 @endif
                             </div>
                             <div class="mb-4">

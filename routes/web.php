@@ -6,6 +6,7 @@ use App\Http\Controllers\Footer;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewsletterUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PetitionController;
 use App\Http\Controllers\TestimonialController;
@@ -61,6 +62,9 @@ Route::view('confirmation', 'contact.confirmation')->name('contact.confirmation'
 /* Newsletter Form*/
 Route::get('/newsletters/confirmation', function() { return view('newsletters.confirmation'); })->name('newsletters.confirmation');
 Route::post('newsletters/subscribe', [Footer::class, 'store'])->name('newsletters.subscribe');
+// Reflechir
+Route::get('newsletters/unsubscribe/{mail}/{newsletter_id}', [NewsletterUserController::class, 'confirmUnsubscribe']);
+Route::get('newsletters/unsubscribe', [NewsletterUserController::class, 'unsubscribe']);
 
 /* Statistiques routes */
 Route::prefix('statistiques')->group(function () {

@@ -1,14 +1,8 @@
-import { now } from "./global";
-import { januaryFirst } from "./global";
-import { dayYear2022 } from "./global";
-import { seconds } from "./global";
-import { numberDayFromJanuaryFirst } from "./global";
-import { numberFrench2023 } from "./global";
-import { countByDay } from "./global";
-import { totalCounter2022 } from "./global";
-import { countIncreaseBySecond } from "./global";
-import { countTotal } from "./global";
-import { refreshEveryOneSecond } from "./global";
+import { now, januaryFirst, dayYear2022, seconds, numberDayFromJanuaryFirst,
+        numberFrench2023, countByDay, totalCounter2022, countIncreaseBySecond,
+        countTotal, refreshEveryOneSecond} from "./global";
+import { linkTwitter, linkFacebook, linkTelegram, linkWhatsapp }  from './reseaux_sociaux';
+
 
 // Migrant Part With General Counter
 var migrantsByDay = 1370;
@@ -151,31 +145,40 @@ var generalMigrantsCounterNode = document.getElementById('generalMigrantsCounter
     }, 1000 / 20);
     // console.log(britishImmigrationByDay2022 / seconds);
 
-// Share the main Page
 
- const fb = document.getElementById('fb');
- fb.addEventListener('click', () => {
-     const navUrl = 'https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/';
-     window.open(navUrl , '_blank');
- });
  
- const tweet = document.getElementById('twitter');
- tweet.addEventListener('click', () => {
-     const navUrl =
-     'https://twitter.com/intent/tweet?text=' +
-     'Va visiter ce lien http://127.0.0.1:8000/, actuellement il y a '+Math.round(generalMigrantsCounter)+' migrants en France en 2023';
-     window.open(navUrl, '_blank');
- });
+
+
+// Share the main Page
+const linkOfTheSite = 'http://127.0.0.1:8000/';
+
+const messageToTwitter = 'Va visiter ce lien '+linkOfTheSite+', actuellement il y a '+Math.round(allMigrantsCounter)+' migrants en France en 2023';
+const messageToTelegram = 'Nombre actuel de migrants en France en 2023 : '+Math.round(allMigrantsCounter);
+const messageToWhatsapp = 'Regarde l\'état de la France, '+Math.round(allMigrantsCounter)+' migrants en France depuis le 1er janvier. D\'autre chiffres alarmants sur ce lien '+linkOfTheSite;
+
+
+const fb = document.getElementById('fb');
+fb.addEventListener('click', () => {
+    linkFacebook(linkOfTheSite);
+});
+const tweet = document.getElementById('twitter');
+tweet.addEventListener('click', () => {
+    linkTwitter(messageToTwitter);
+});
+//  tweet.addEventListener('click', () => {
+//      const navUrl =
+//      'https://twitter.com/intent/tweet?text=' +
+//      'Va visiter ce lien http://127.0.0.1:8000/, actuellement il y a '+Math.round(generalMigrantsCounter)+' migrants en France en 2023';
+//      window.open(navUrl, '_blank');
+//  });
  
  
  const telegram = document.getElementById('telegram');
  telegram.addEventListener('click', () => {
-     const navUrl = 'https://t.me/share/url?url={http://127.0.0.1:8000/}&text={Nombre actuel de migrants en France en 2023 : '+Math.round(generalMigrantsCounter)+'}';
-     window.open(navUrl, '_blank');
+    linkTelegram(messageToTelegram);
  });
  
  const whatsapp = document.getElementById('whatsapp');
  whatsapp.addEventListener('click', () => {
-     const navUrl = 'whatsapp://send?text=Regarde l\'état de la France,'+Math.round(generalMigrantsCounter)+' migrants en France depuis le 1er janvier. D\'autre chiffres alarmants sur ce lien http://www.website.com';
-     window.open(navUrl, '_blank');
+     linkWhatsapp(messageToWhatsapp);
  });

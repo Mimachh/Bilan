@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('email');
             $table->boolean('statut')->nullable();
-            $table->boolean('confirm_rule')->nullable();
+            // $table->boolean('confirm_rule')->nullable();
             $table->timestamps();
         });
     }

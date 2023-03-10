@@ -124,6 +124,14 @@
         <h3 class="text-gray-400 font-semibold" title="Nombre d'OQTF exécutées depuis 2011">Nombre d'OQTF exécutées depuis 2011 : 
             <span id="nombreOQTFExecuteesDepuis2011TotalCounter" title="Nombre d'OQTF exécutées depuis 2011"></span>
         </h3>
+
+        <h3 class="text-gray-400 font-semibold" title="Nombre de policiers blessés en opération">Nombre de policiers blessés en opération : 
+            <span id="nombrePoliciersBlessesOperation2022TotalCounter" title="Nombre de policiers blessés en opération"></span>
+        </h3>
+
+        <h3 class="text-gray-400 font-semibold" title="Nombre de refus d'obtempérer">Nombre de refus d'obtempérer : 
+            <span id="nombreRefusObtemperer2022TotalCounter" title="Nombre de refus d'obtempérer"></span>
+        </h3>
     </div>
 <div id="div_message" class="hidden border bg-green-400">
 <h4 id="message" class="text-red-600"></h4>

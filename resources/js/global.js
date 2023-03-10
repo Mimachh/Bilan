@@ -32,3 +32,33 @@ export function countTotal(e){
 
 // Other
 export var refreshEveryOneSecond = 1000;
+
+
+// Here comes the counter for the flash message
+var deficitByDay = 452054794.5;
+var deficitTotalCounter = (numberDayFromJanuaryFirst * deficitByDay);
+export function deficitTotalCounterImport() {
+var deficitTotalCounterNode = document.getElementById('deficitTotalCounter');
+deficitTotalCounterNode.innerHTML = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(deficitTotalCounter)
+setInterval(function() {
+    //Deficit general
+    deficitTotalCounter += (deficitByDay / (seconds * 20));
+    deficitTotalCounterNode.innerHTML = new Intl.NumberFormat('en-US').format(Math.round(deficitTotalCounter * 1) / 1 );
+   
+}, (1000 / 20));
+}
+if (deficitTotalCounter > 30979300000)
+{
+    document.getElementById('message').innerHTML = 'le chiffre est de ';
+    document.getElementById('div_message').classList.remove('hidden');
+    setTimeout(function() {
+        document.getElementById('div_message').classList.add('hidden');
+    }, 10000);
+    
+}
+
+console.log(deficitTotalCounter)
+
+
+
+    

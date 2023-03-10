@@ -100,5 +100,5 @@
     </div>
     <hr>
 </section>
-@vite(['resources/js/migration.js', 'resources/js/ruralite.js'])
+@vite('resources/js/migration.js')
 @endsection

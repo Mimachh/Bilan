@@ -11,6 +11,7 @@ class Footer extends Controller
     {
         //dd($request);
         $statut = 1;
+        // $email = encrypt($request->email);
         $data = $request->validate([
             'email' => 'required|max:255|unique:newsletter_users,email',
             'confirm_rule' => 'required|boolean', 
@@ -25,7 +26,7 @@ class Footer extends Controller
         $create = NewsletterUser::create([
             'statut' => $statut,
             'email' => $request->email,
-            'confirm_rule' => $request->confirm_rule,
+            // 'confirm_rule' => $request->confirm_rule,
         ]);
 
         return redirect()->route('newsletters.confirmation');

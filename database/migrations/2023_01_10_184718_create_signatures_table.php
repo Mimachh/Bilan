@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('last_name');
             $table->foreignId('petition_id')->constrained();
-            $table->string('email')->unique();
+            $table->string('email');
             $table->boolean('confirm_rule');
             $table->timestamps();
         });

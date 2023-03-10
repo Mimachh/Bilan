@@ -36,8 +36,7 @@
         </a> 
     </div>
     <div class="bg-violet-degrade py-30 text-center">
-        <p class="text-lg text-white px-4 pb-4">Temps restants avant la retraite de Manu.
-        <span class="pt-4 chiffre_election text-white" id="destitution"></span>
+        <p class="text-xl text-white px-4 pt-8">Temps restants avant la retraite de Manu.
         <p id='num'></p>
         <!-- CountDown -->
         <div id='countDiv' class="">

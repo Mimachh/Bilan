@@ -14,4 +14,5 @@ class NewsletterUser extends Model
         'statut',
         'confirm_rule',
     ];
+
 }
